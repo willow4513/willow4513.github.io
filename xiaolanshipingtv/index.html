@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小蓝视频gtv官网-安卓与电视端使用手册</title>
+<meta name="description" content="小蓝视频gtv官网栏目整理安卓手机、电视盒子与投屏端的安装步骤、版本差异、会员说明和蓝光画质设置。收录本周更新条目、常见报错处理与用户实测反馈，方便按设备类型快速找到对应操作。">
+<meta name="keywords" content="小蓝视频gtv官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a5c'/%3E%3Crect x='14' y='20' width='26' height='24' rx='5' fill='%2350b8e8'/%3E%3Cpath d='M42 32l10 7V25z' fill='%23f2c14e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --c-ink:#12263a;
+  --c-ink-2:#33475b;
+  --c-mute:#5f7285;
+  --c-line:#d8e2ea;
+  --c-bg:#f4f7fa;
+  --c-panel:#ffffff;
+  --c-brand:#123a5c;
+  --c-brand-2:#1d5b86;
+  --c-accent:#e0932f;
+  --c-accent-soft:#fdf3e2;
+  --c-blue-soft:#e7f1f8;
+  --c-green:#2e7d5b;
+  --c-red:#b4402f;
+  --font-sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  --fs-h1:clamp(1.7rem,2.6vw + 1rem,2.6rem);
+  --fs-h2:clamp(1.25rem,1vw + .95rem,1.55rem);
+  --fs-h3:1.06rem;
+  --fs-body:1rem;
+  --fs-sm:.875rem;
+  --fs-xs:.8rem;
+  --sp-1:.35rem;--sp-2:.6rem;--sp-3:.9rem;--sp-4:1.25rem;--sp-5:1.8rem;--sp-6:2.6rem;--sp-7:3.6rem;
+  --radius:10px;--radius-lg:16px;
+  --shadow-1:0 1px 2px rgba(18,38,58,.06),0 2px 10px rgba(18,38,58,.05);
+  --shadow-2:0 6px 22px rgba(18,38,58,.1);
+  --sticky-h:76px;
+  --ann-h:34px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+body{
+  margin:0;font-family:var(--font-sans);color:var(--c-ink);background:var(--c-bg);
+  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--c-brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2.5px solid var(--c-accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--sp-4)}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky-h) + var(--ann-h) + 10px)}
+
+/* ---------- 公告条 ---------- */
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:var(--c-brand);color:#dce9f3;font-size:var(--fs-xs);
+  height:var(--ann-h);display:flex;align-items:center;overflow:hidden;
+}
+.announce .wrap{display:flex;align-items:center;gap:var(--sp-3);white-space:nowrap;overflow:hidden}
+.announce .tag{background:var(--c-accent);color:#20303e;font-weight:700;padding:0 6px;border-radius:4px;flex:none}
+.announce .txt{overflow:hidden;text-overflow:ellipsis}
+.announce time{color:#9fc3dc;flex:none}
+
+/* ---------- 页头 ---------- */
+.site-head{
+  position:sticky;top:var(--ann-h);z-index:55;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--c-line);box-shadow:var(--shadow-1);
+}
+.head-inner{display:flex;align-items:center;gap:var(--sp-4);min-height:var(--sticky-h);flex-wrap:wrap;padding:var(--sp-2) 0}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:42px;height:42px;flex:none}
+.brand-name{font-weight:800;font-size:1.12rem;letter-spacing:.01em;color:var(--c-brand);line-height:1.25}
+.brand-name small{display:block;font-weight:400;font-size:var(--fs-xs);color:var(--c-mute);letter-spacing:0}
+.main-nav{display:flex;gap:var(--sp-1);flex-wrap:wrap;flex:1 1 auto}
+.main-nav a{
+  font-size:var(--fs-sm);color:var(--c-ink-2);padding:6px 10px;border-radius:999px;
+  transition:background .15s,color .15s;white-space:nowrap;
+}
+.main-nav a:hover{background:var(--c-blue-soft);color:var(--c-brand);text-decoration:none}
+.main-nav a.is-active{background:var(--c-blue-soft);color:var(--c-brand);font-weight:600}
+.head-tools{display:flex;align-items:center;gap:var(--sp-2);flex:none}
+.search-form{display:flex;align-items:center;border:1px solid var(--c-line);border-radius:999px;background:#fbfdfe;overflow:hidden}
+.search-form input{
+  border:0;background:transparent;padding:7px 12px;font:inherit;font-size:var(--fs-sm);
+  width:11.5em;color:var(--c-ink);min-width:0;
+}
+.search-form input:focus{outline:none}
+.search-form button{
+  border:0;background:var(--c-brand);color:#fff;padding:7px 13px;font:inherit;font-size:var(--fs-sm);
+  cursor:pointer;line-height:1.4;
+}
+.search-form button:hover{background:var(--c-brand-2)}
+.menu-btn{
+  display:none;border:1px solid var(--c-line);background:#fff;border-radius:8px;
+  padding:7px 10px;font:inherit;font-size:var(--fs-sm);cursor:pointer;color:var(--c-ink-2);
+}
+.search-feedback{font-size:var(--fs-xs);color:var(--c-mute);padding:2px 4px 0}
+.search-feedback.no-result{color:var(--c-red)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:
+    radial-gradient(1000px 380px at 88% -8%, rgba(224,147,47,.16), transparent 60%),
+    linear-gradient(160deg,#0f3350 0%,#17476b 48%,#1f5a80 100%);
+  color:#eaf3fa;padding:var(--sp-7) 0 var(--sp-6);position:relative;overflow:hidden;
+}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--sp-6);align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);letter-spacing:.14em;color:#a9cde4;border:1px solid rgba(169,205,228,.35);padding:4px 12px;border-radius:999px}
+.hero h1{font-size:var(--fs-h1);line-height:1.25;margin:var(--sp-3) 0 var(--sp-3);letter-spacing:.01em}
+.hero p.lead{margin:0 0 var(--sp-4);color:#cfe2ef;font-size:1.02rem;max-width:34em}
+.hero-actions{display:flex;gap:var(--sp-3);flex-wrap:wrap;margin-bottom:var(--sp-4)}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:999px;font-size:var(--fs-sm);font-weight:600;
+  border:1px solid transparent;transition:transform .15s,background .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--c-accent);color:#1d2b36}
+.btn-primary:hover{background:#eda944;color:#1d2b36}
+.btn-ghost{border-color:rgba(214,233,245,.5);color:#e6f0f8}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-stats{display:flex;gap:var(--sp-5);flex-wrap:wrap;border-top:1px solid rgba(200,224,240,.22);padding-top:var(--sp-3);margin:0;list-style:none}
+.hero-stats li{font-size:var(--fs-xs);color:#a9cde4}
+.hero-stats b{display:block;font-size:1.35rem;color:#fff;line-height:1.3;font-variant-numeric:tabular-nums}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 26px rgba(0,0,0,.3))}
+.hero-badge{
+  position:absolute;right:6%;bottom:4%;background:#fff;color:var(--c-brand);
+  border-radius:12px;padding:8px 14px;font-size:var(--fs-xs);box-shadow:var(--shadow-2);line-height:1.5;
+}
+.hero-badge b{display:block;font-size:1rem;color:var(--c-accent)}
+
+/* ---------- 布局 ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-5);padding:var(--sp-6) 0}
+.main-col{min-width:0}
+.side-col{min-width:0;display:flex;flex-direction:column;gap:var(--sp-4)}
+
+/* ---------- 通用板块 ---------- */
+.panel{background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:var(--sp-5);box-shadow:var(--shadow-1)}
+.panel + .panel{margin-top:var(--sp-4)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-3);flex-wrap:wrap;margin-bottom:var(--sp-3)}
+.sec-head h2{font-size:var(--fs-h2);margin:0;line-height:1.35;color:var(--c-brand)}
+.sec-head .note{font-size:var(--fs-xs);color:var(--c-mute)}
+.sec-intro{margin:0 0 var(--sp-4);color:var(--c-ink-2);font-size:var(--fs-sm)}
+h3{font-size:var(--fs-h3);margin:var(--sp-4) 0 var(--sp-2);color:var(--c-brand)}
+p{margin:0 0 var(--sp-3)}
+.meta{font-size:var(--fs-xs);color:var(--c-mute)}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tag{
+  display:inline-block;font-size:var(--fs-xs);background:var(--c-blue-soft);color:var(--c-brand-2);
+  padding:3px 10px;border-radius:999px;border:1px solid #cfe2ef;
+}
+.tag:hover{text-decoration:none;background:#d8e9f5}
+.tag.warm{background:var(--c-accent-soft);border-color:#f3ddb8;color:#8b5a11}
+
+/* 概览：定义卡 */
+.def-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.def-card{border:1px solid var(--c-line);border-left:3px solid var(--c-brand-2);border-radius:var(--radius);padding:var(--sp-3);background:#fbfdfe}
+.def-card dt{font-weight:700;font-size:var(--fs-sm);color:var(--c-brand);margin-bottom:2px}
+.def-card dd{margin:0;font-size:var(--fs-sm);color:var(--c-ink-2)}
+
+/* 精选网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.card{border:1px solid var(--c-line);border-radius:var(--radius);overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.card .thumb{aspect-ratio:16/9;background:#dfe9f1;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:var(--sp-3);display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{font-size:.98rem;margin:0;line-height:1.45;color:var(--c-ink)}
+.card-body .desc{font-size:var(--fs-sm);color:var(--c-ink-2);margin:0}
+.card-body .meta{margin-top:auto}
+.card.feature{grid-column:span 2}
+.card.feature .thumb{aspect-ratio:16/8}
+
+/* 紧凑列表 */
+.compact{list-style:none;margin:0;padding:0}
+.compact li{display:flex;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px dashed var(--c-line);align-items:flex-start}
+.compact li:last-child{border-bottom:0;padding-bottom:0}
+.compact time{flex:none;font-size:var(--fs-xs);color:var(--c-mute);width:5.2em;padding-top:2px;font-variant-numeric:tabular-nums}
+.compact .li-main{min-width:0}
+.compact .li-main a{font-weight:600;font-size:var(--fs-sm);color:var(--c-ink)}
+.compact .li-main a:hover{color:var(--c-brand-2)}
+.compact p{margin:2px 0 0;font-size:var(--fs-xs);color:var(--c-mute)}
+.pill{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:4px;background:var(--c-accent-soft);color:#8b5a11;margin-left:6px;vertical-align:1px;font-weight:600}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.cat{display:block;border:1px solid var(--c-line);border-radius:var(--radius);padding:var(--sp-3);background:linear-gradient(180deg,#fbfdfe,#f2f7fb);transition:transform .15s,border-color .15s}
+.cat:hover{transform:translateY(-2px);border-color:#a9c9de;text-decoration:none}
+.cat strong{display:block;color:var(--c-brand);font-size:.96rem;margin-bottom:2px}
+.cat span{font-size:var(--fs-xs);color:var(--c-mute)}
+
+/* 深度解析 */
+.deep{background:#fbfaf6;border:1px solid #e8dfcc;border-radius:var(--radius-lg);padding:var(--sp-5)}
+.deep .sec-head h2{color:#6b4a12}
+.deep h3{color:#6b4a12;border-left:4px solid var(--c-accent);padding-left:10px}
+.claim{background:#fff;border:1px solid #e8dfcc;border-radius:var(--radius);padding:var(--sp-3);margin:0 0 var(--sp-4)}
+.claim b{color:#8b5a11}
+.check-table{width:100%;border-collapse:collapse;font-size:var(--fs-sm);margin:var(--sp-2) 0 var(--sp-3)}
+.check-table caption{text-align:left;font-weight:700;font-size:var(--fs-sm);color:#6b4a12;padding-bottom:6px}
+.check-table th,.check-table td{border:1px solid #e3d7bd;padding:7px 10px;text-align:left;vertical-align:top}
+.check-table th{background:#f5eddd;font-weight:600;color:#6b4a12;white-space:nowrap}
+.timeline{list-style:none;margin:var(--sp-2) 0 var(--sp-4);padding:0 0 0 18px;border-left:2px solid #e3d7bd}
+.timeline li{position:relative;padding:0 0 var(--sp-3) 14px;font-size:var(--fs-sm)}
+.timeline li::before{content:"";position:absolute;left:-24px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--c-accent);border:2px solid #fbfaf6}
+.timeline time{font-weight:700;color:#8b5a11;font-size:var(--fs-xs);display:block}
+
+/* 体验指南步骤 */
+.steps{counter-reset:step;list-style:none;margin:0;padding:0;display:grid;gap:var(--sp-3)}
+.steps li{counter-increment:step;display:grid;grid-template-columns:34px minmax(0,1fr);gap:var(--sp-3);padding:var(--sp-3);border:1px solid var(--c-line);border-radius:var(--radius);background:#fff}
+.steps li::before{
+  content:counter(step);width:34px;height:34px;border-radius:50%;background:var(--c-brand);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-size:var(--fs-sm);grid-row:span 2;
+}
+.steps strong{display:block;color:var(--c-brand);font-size:.95rem;margin-bottom:2px}
+.steps p{margin:0;font-size:var(--fs-sm);color:var(--c-ink-2);grid-column:2}
+
+/* FAQ */
+.faq details{border:1px solid var(--c-line);border-radius:var(--radius);background:#fff;margin-bottom:var(--sp-2);overflow:hidden}
+.faq summary{
+  cursor:pointer;padding:var(--sp-3);font-weight:600;font-size:var(--fs-sm);color:var(--c-ink);
+  list-style:none;display:flex;justify-content:space-between;gap:var(--sp-3);align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--c-brand-2);font-size:1.15rem;font-weight:400;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{background:#f2f7fb;border-bottom:1px solid var(--c-line)}
+.faq .ans{padding:var(--sp-3);font-size:var(--fs-sm);color:var(--c-ink-2)}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.comment{border:1px solid var(--c-line);border-radius:var(--radius);padding:var(--sp-3);background:#fbfdfe;font-size:var(--fs-sm)}
+.comment header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;color:#fff;background:var(--c-brand-2);flex:none}
+.avatar.a2{background:#2e7d5b}.avatar.a3{background:#b4402f}.avatar.a4{background:#8b5a11}.avatar.a5{background:#5b4b8a}.avatar.a6{background:#1f6f78}
+.comment header b{font-size:var(--fs-xs);color:var(--c-ink)}
+.comment header time{font-size:.72rem;color:var(--c-mute);margin-left:auto}
+.comment p{margin:0;color:var(--c-ink-2)}
+.comment .quote{color:var(--c-brand-2);font-weight:600}
+.stars{color:var(--c-accent);font-size:var(--fs-xs);letter-spacing:1px}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.news-item{border-left:3px solid var(--c-brand-2);padding:var(--sp-2) var(--sp-3);background:#fbfdfe;border-radius:0 var(--radius) var(--radius) 0}
+.news-item time{font-size:var(--fs-xs);color:var(--c-mute)}
+.news-item h3{font-size:.95rem;margin:4px 0 4px}
+.news-item p{margin:0;font-size:var(--fs-xs);color:var(--c-ink-2)}
+
+/* 榜单 */
+.rank-list{list-style:none;margin:0;padding:0;counter-reset:rank}
+.rank-list li{counter-increment:rank;display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:var(--sp-3);align-items:center;padding:var(--sp-3) 0;border-bottom:1px solid var(--c-line)}
+.rank-list li:last-child{border-bottom:0}
+.rank-list li::before{
+  content:counter(rank);font-weight:800;color:var(--c-mute);font-size:1.05rem;text-align:center;
+  width:28px;height:28px;line-height:28px;border-radius:8px;background:#f0f5f9;
+}
+.rank-list li:nth-child(1)::before{background:var(--c-accent);color:#22303a}
+.rank-list li:nth-child(2)::before{background:#cfdde7;color:#22303a}
+.rank-list li:nth-child(3)::before{background:#e8d2b3;color:#4a3410}
+.rank-list strong{display:block;font-size:var(--fs-sm);color:var(--c-ink)}
+.rank-list span{font-size:var(--fs-xs);color:var(--c-mute)}
+.rank-score{font-variant-numeric:tabular-nums;font-weight:700;color:var(--c-brand-2);font-size:var(--fs-sm)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--c-line);border-radius:var(--radius);overflow:hidden;font-size:var(--fs-sm)}
+.compare>div{padding:var(--sp-3)}
+.compare .c-head{background:var(--c-brand);color:#eaf3fa;font-weight:700;font-size:var(--fs-sm)}
+.compare .c-head.alt{background:var(--c-brand-2)}
+.compare .c-body{background:#fff;border-top:1px solid var(--c-line)}
+.compare .c-body.alt{background:#fbfdfe}
+.compare ul{margin:0;padding-left:1.1em}
+.compare li{margin-bottom:4px}
+
+/* 相关推荐标签块 */
+.reco-block{border:1px dashed #b9cfdf;border-radius:var(--radius);padding:var(--sp-4);background:#f6fafd}
+.reco-block h2{margin-top:0}
+.reco-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;list-style:none;margin:0;padding:0;font-size:var(--fs-sm)}
+.reco-list li{padding:6px 0;border-bottom:1px dotted var(--c-line)}
+.reco-list a{color:var(--c-ink-2)}
+.reco-list a:hover{color:var(--c-brand-2)}
+
+/* 侧栏 */
+.side-card{background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--radius-lg);padding:var(--sp-4);box-shadow:var(--shadow-1)}
+.side-card h2{font-size:1rem;margin:0 0 var(--sp-3);color:var(--c-brand);line-height:1.4}
+.side-nav{list-style:none;margin:0;padding:0;font-size:var(--fs-sm)}
+.side-nav a{display:block;padding:6px 10px;border-radius:8px;color:var(--c-ink-2);border-left:2px solid transparent}
+.side-nav a:hover{background:#f1f7fb;text-decoration:none}
+.side-nav a.is-current{background:var(--c-blue-soft);color:var(--c-brand);font-weight:600;border-left-color:var(--c-brand)}
+.side-facts{list-style:none;margin:0;padding:0;font-size:var(--fs-sm)}
+.side-facts li{display:flex;justify-content:space-between;gap:var(--sp-2);padding:7px 0;border-bottom:1px dashed var(--c-line)}
+.side-facts li:last-child{border-bottom:0}
+.side-facts span{color:var(--c-mute)}
+.side-facts b{font-variant-numeric:tabular-nums;color:var(--c-brand)}
+.side-cta{background:linear-gradient(150deg,#123a5c,#1f5a80);color:#e3eef6;border:0}
+.side-cta h2{color:#fff}
+.side-cta p{font-size:var(--fs-sm);color:#c3d9e8}
+.side-cta .btn-primary{display:inline-block;margin-top:4px}
+
+/* 页尾 */
+.site-foot{background:#0e2436;color:#b9cddc;margin-top:var(--sp-6);padding:var(--sp-6) 0 var(--sp-4);font-size:var(--fs-sm)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--sp-5)}
+.site-foot h2{font-size:var(--fs-sm);color:#fff;margin:0 0 var(--sp-3);letter-spacing:.02em}
+.site-foot ul{list-style:none;margin:0;padding:0}
+.site-foot li{margin-bottom:8px}
+.site-foot a{color:#b9cddc;font-size:var(--fs-xs)}
+.site-foot a:hover{color:#fff}
+.foot-brand .brand-name{color:#fff}
+.foot-brand .brand-name small{color:#8eabc2}
+.foot-brand p{font-size:var(--fs-xs);color:#8eabc2;line-height:1.7;margin:var(--sp-3) 0 0;max-width:26em}
+.foot-bottom{border-top:1px solid #1d3a51;margin-top:var(--sp-5);padding-top:var(--sp-3);display:flex;justify-content:space-between;gap:var(--sp-3);flex-wrap:wrap;font-size:var(--fs-xs);color:#7c99b1}
+.foot-bottom .sample{color:#6f8ba3}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;width:44px;height:44px;border-radius:50%;
+  border:1px solid #b9cfdf;background:#fff;color:var(--c-brand);font-size:1.05rem;cursor:pointer;
+  box-shadow:var(--shadow-2);display:none;place-items:center;
+}
+.to-top.show{display:grid}
+.to-top:hover{background:var(--c-blue-soft)}
+
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr;padding:var(--sp-5) 0}
+  .side-col{order:2}
+  .main-col{order:1}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{min-height:0;max-width:420px}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card.feature{grid-column:span 2}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .menu-btn{display:inline-block}
+  .main-nav{
+    display:none;width:100%;order:3;padding-top:var(--sp-2);border-top:1px solid var(--c-line);
+    margin-top:var(--sp-2);
+  }
+  .main-nav.open{display:flex}
+  .head-tools{margin-left:auto}
+}
+@media (max-width:640px){
+  .wrap{padding:0 var(--sp-3)}
+  .card-grid,.cat-grid,.comment-grid,.news-grid,.def-grid,.reco-list{grid-template-columns:1fr}
+  .card.feature{grid-column:span 1}
+  .compare{grid-template-columns:1fr}
+  .compare .c-head.alt{order:3}
+  .head-inner{gap:var(--sp-2)}
+  .search-form input{width:8.5em}
+  .hero{padding:var(--sp-5) 0 var(--sp-4)}
+  .hero-stats{gap:var(--sp-4)}
+  .panel{padding:var(--sp-4)}
+  .deep{padding:var(--sp-4)}
+  .foot-grid{grid-template-columns:1fr}
+  .to-top{right:12px;bottom:12px}
+  .compact li{flex-wrap:wrap;gap:0}
+  .compact time{width:auto}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="announce" role="region" aria-label="站内更新公告">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span class="txt">11 月 6 日推送 4.9.2 版本：电视端解码兼容补丁，修复 SDK 33 以上设备投屏黑屏</span>
+    <time datetime="2026-11-08">2026-11-08</time>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/#" aria-label="小蓝视频gtv官网 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+        <rect x="2" y="2" width="60" height="60" rx="14" fill="#123a5c"/>
+        <rect x="13" y="20" width="27" height="24" rx="5" fill="#50b8e8"/>
+        <path d="M42 32l11 7.5V24.5z" fill="#f2c14e"/>
+        <rect x="17" y="38" width="9" height="3" rx="1.5" fill="#123a5c" opacity=".55"/>
+        <rect x="49" y="15" width="6" height="6" rx="2" fill="#f2c14e" opacity=".8"/>
+      </svg>
+      <span class="brand-name">小蓝视频gtv官网<small>设备端使用与版本手册</small></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">产品概览</a>
+      <a href="/#picks">本周精选</a>
+      <a href="/#updates">更新日志</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#reviews">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#rank">口碑榜单</a>
+      <a href="/#reco">相关推荐</a>
+    </nav>
+
+    <div class="head-tools">
+      <form class="search-form" id="siteSearch" role="search" aria-label="站内查找">
+        <input type="search" id="searchInput" name="q" placeholder="搜栏目或关键词" aria-label="搜索本页内容">
+        <button type="submit" aria-label="开始查找">查找</button>
+      </form>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+  <div class="wrap"><p class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></p></div>
+</header>
+
+<main>
+  <!-- 首屏 -->
+  <section class="hero" aria-label="主题首屏">
+    <div class="wrap">
+      <div>
+        <span class="hero-kicker">ANDROID · TV BOX · CAST</span>
+        <h1>小蓝视频gtv官网</h1>
+        <p class="lead">面向安卓手机、电视盒子与投屏三种观看路径，整理安装包结构、解码设置、会员权益和版本回退办法。每个条目都标注影响范围，遇到问题能按设备型号直接对号入座。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#guide">看安装与设置步骤</a>
+          <a class="btn btn-ghost" href="/#updates">查 4.9.2 更新明细</a>
+        </div>
+        <ul class="hero-stats">
+          <li><b>4.9.2</b>当前稳定版本</li>
+          <li><b>3</b>适配终端类型</li>
+          <li><b>28</b>收录问题条目</li>
+          <li><b>11-06</b>最近推送日期</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 520 400" role="img">
+          <defs>
+            <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#59c0ec"/>
+              <stop offset="1" stop-color="#2a7aa8"/>
+            </linearGradient>
+          </defs>
+          <rect x="40" y="60" width="300" height="190" rx="14" fill="#0b2b42" opacity=".55"/>
+          <rect x="62" y="80" width="256" height="150" rx="8" fill="url(#scr)"/>
+          <path d="M176 130l52 25-52 25z" fill="#ffffff" opacity=".92"/>
+          <rect x="96" y="248" width="22" height="40" rx="4" fill="#0b2b42" opacity=".6"/>
+          <rect x="264" y="248" width="22" height="40" rx="4" fill="#0b2b42" opacity=".6"/>
+          <rect x="60" y="300" width="260" height="10" rx="5" fill="#e6f0f8" opacity=".35"/>
+          <rect x="356" y="120" width="120" height="210" rx="18" fill="#0b2b42" opacity=".6" stroke="#9fc3dc" stroke-width="2"/>
+          <rect x="368" y="136" width="96" height="164" rx="8" fill="#dff0fa" opacity=".9"/>
+          <rect x="380" y="152" width="72" height="7" rx="3.5" fill="#1f5a80" opacity=".7"/>
+          <rect x="380" y="168" width="52" height="6" rx="3" fill="#1f5a80" opacity=".45"/>
+          <rect x="380" y="196" width="72" height="40" rx="6" fill="#2a7aa8" opacity=".45"/>
+          <rect x="388" y="206" width="56" height="6" rx="3" fill="#eaf3fa"/>
+          <rect x="388" y="218" width="38" height="5" rx="2.5" fill="#eaf3fa" opacity=".7"/>
+          <circle cx="408" cy="316" r="11" fill="#0b2b42" opacity=".6" stroke="#9fc3dc" stroke-width="2"/>
+          <path d="M340 190c20-8 34-8 46 0" stroke="#f2c14e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="388" cy="188" r="5" fill="#f2c14e"/>
+          <circle cx="330" cy="196" r="4" fill="#9fc3dc"/>
+        </svg>
+        <p class="hero-badge"><b>4.9.2</b>投屏黑屏修复<br>覆盖 Android 13/14</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <!-- 主内容 -->
+    <div class="main-col">
+
+      <!-- 1 领域概览 -->
+      <section class="panel" id="overview" aria-labelledby="h-overview">
+        <div class="sec-head">
+          <h2 id="h-overview">产品概览：三条观看路径的分工</h2>
+          <span class="note">核对依据：4.9.2 版本说明与设备兼容表</span>
+        </div>
+        <p>同一套内容库通过三端分发，包体来源与解码策略不同。手机端走 Google Play 与官网 APK 两条渠道，电视端以电视盒子安装包为主，投屏依赖 DLNA 与自研协议双通道。理解这三者的差别，比记住单一入口更有用。</p>
+        <dl class="def-grid">
+          <div class="def-card"><dt>手机端 APK</dt><dd>包体约 68 MB，支持 Android 7.0 至 15，含硬解 H.265 与软解回退。官网渠道额外提供历史版本下载。</dd></div>
+          <div class="def-card"><dt>电视盒子版</dt><dd>包体约 42 MB，适配 Android TV 9 及以上，遥控器焦点路径在 4.9.0 重做，首页横向滚动改为分页。</dd></div>
+          <div class="def-card"><dt>投屏通道</dt><dd>DLNA 与 Cast 双协议并存。4.9.2 修正了 SDK 33 以上系统投屏黑屏，需在设置里手动开启「兼容投屏」。</dd></div>
+          <div class="def-card"><dt>会员体系</dt><dd>手机端与电视端权益分开发售，投屏继承手机端账号权益。蓝光画质需 1080P 以上源与硬解同时满足。</dd></div>
+        </dl>
+        <h3>与同类应用的三个差异点</h3>
+        <p>第一，历史版本保留周期长，官网上能查到 2025 年以来的 9 个版本安装包，适合旧盒子机型回退。第二，电视端提供「低内存模式」，在 1 GB RAM 盒子上会关闭预加载，实测启动时间延长约 2 秒但减少闪退。第三，弹幕与字幕轨道可分开开关，字幕支持 SRT 外挂导入，这一点在 4.8.6 之后才稳定。</p>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="panel" id="picks" aria-labelledby="h-picks">
+        <div class="sec-head">
+          <h2 id="h-picks">本周精选：按场景挑条目</h2>
+          <span class="note">11 月 2 日至 11 月 8 日编辑整理</span>
+        </div>
+        <div class="card-grid">
+          <article class="card feature">
+            <div class="thumb"><img src="https://picsum.photos/seed/gtv-doc-television/800/400" width="800" height="400" loading="lazy" alt="电视盒子与遥控器并排摆放的桌面场景" style="object-fit:cover"></div>
+            <div class="card-body">
+              <h3>电视盒子 1 GB 内存机型的低内存模式实测</h3>
+              <p class="desc">用两台同型号盒子分别开关低内存模式，记录冷启动、切集与退出后台三项耗时。结论是切集收益最明显，冷启动反而变慢。</p>
+              <p class="meta">11-05 · 设备实测 · 阅读约 6 分钟</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://picsum.photos/seed/gtv-subtitle-track/400/225" width="400" height="225" loading="lazy" alt="视频播放界面的字幕轨道列表" style="object-fit:cover"></div>
+            <div class="card-body">
+              <h3>外挂 SRT 字幕导入的编码要求</h3>
+              <p class="desc">UTF-8 无 BOM 最稳，GBK 会乱码。文件命名与视频同目录同前缀可自动挂载。</p>
+              <p class="meta">11-04 · 操作说明</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://picsum.photos/seed/gtv-cast-pairing/400/225" width="400" height="225" loading="lazy" alt="手机与电视之间的投屏配对提示画面" style="object-fit:cover"></div>
+            <div class="card-body">
+              <h3>投屏配对失败的四类原因排查顺序</h3>
+              <p class="desc">同一局域网、AP 隔离、路由器组播、应用权限，按这个顺序查能覆盖九成问题。</p>
+              <p class="meta">11-03 · 排障清单</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://picsum.photos/seed/gtv-h265-decode/400/225" width="400" height="225" loading="lazy" alt="播放器解码信息面板显示 H.265 硬解标识" style="object-fit:cover"></div>
+            <div class="card-body">
+              <h3>硬解与软解的画质和功耗对照</h3>
+              <p class="desc">H.265 硬解在中端机上功耗低约 30%，但部分机型色偏，软解更准也更烫。</p>
+              <p class="meta">11-02 · 对照测试</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://picsum.photos/seed/gtv-history-version/400/225" width="400" height="225" loading="lazy" alt="历史版本安装包列表页面截图" style="object-fit:cover"></div>
+            <div class="card-body">
+              <h3>4.8.6 回退流程与数据保留范围</h3>
+              <p class="desc">降级会清空播放进度缓存，收藏与账号数据保留。操作前先导出观看记录。</p>
+              <p class="meta">11-01 · 版本操作</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="panel" id="updates" aria-labelledby="h-updates">
+        <div class="sec-head">
+          <h2 id="h-updates">更新日志：近两周推送记录</h2>
+          <span class="note">共 5 条，均可在版本说明页核对</span>
+        </div>
+        <ul class="compact">
+          <li>
+            <time datetime="2026-11-06">11-06</time>
+            <div class="li-main">
+              <a href="/#deep">4.9.2 电视端解码兼容补丁</a><span class="pill">稳定版</span>
+              <p>修复 SDK 33 以上设备投屏黑屏；电视盒子焦点卡顿下降，实测首页翻页从 480 ms 降到 210 ms。</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11-03</time>
+            <div class="li-main">
+              <a href="/#faq">4.9.1 字幕轨道独立开关</a>
+              <p>弹幕与字幕拆分控制；外挂字幕支持 SRT 与 ASS 两种格式，ASS 样式仅保留基础字体与描边。</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-29">10-29</time>
+            <div class="li-main">
+              <a href="/#guide">4.9.0 电视端首页改版</a><span class="pill">大版本</span>
+              <p>横向滚动改为分页；遥控器焦点路径重做；新增低内存模式开关，默认在 1 GB 机型上开启。</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-23">10-23</time>
+            <div class="li-main">
+              <a href="/#reviews">4.8.8 播放器进度记忆修复</a>
+              <p>解决部分机型退出后进度归零；投屏场景下的进度同步延迟由约 8 秒缩短到 2 秒内。</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-15">10-15</time>
+            <div class="li-main">
+              <a href="/#rank">4.8.7 会员权益页重排</a>
+              <p>手机端与电视端权益分栏展示，减少误购；蓝光画质标识补充了硬解条件说明。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="panel" id="channels" aria-labelledby="h-channels">
+        <div class="sec-head">
+          <h2 id="h-channels">分类入口：按需求找栏目</h2>
+          <span class="note">10 个栏目，含 4 个高频查询类目</span>
+        </div>
+        <div class="cat-grid">
+          <a class="cat" href="/#guide"><strong>安卓手机安装包下载</strong><span>官方渠道与签名校验</span></a>
+          <a class="cat" href="/#guide"><strong>电视盒子安装教程</strong><span>U 盘安装与 ADB 推送</span></a>
+          <a class="cat" href="/#guide"><strong>手机投屏电视设置</strong><span>DLNA 与 Cast 双通道</span></a>
+          <a class="cat" href="/#deep"><strong>蓝光画质开启条件</strong><span>源码率与硬解门槛</span></a>
+          <a class="cat" href="/#faq"><strong>会员权益与设备绑定</strong><span>手机端电视端分开计算</span></a>
+          <a class="cat" href="/#updates"><strong>历史版本回退下载</strong><span>2025 年以来 9 个版本</span></a>
+          <a class="cat" href="/#reviews"><strong>低内存模式实测反馈</strong><span>1 GB 与 2 GB 机型对比</span></a>
+          <a class="cat" href="/#faq"><strong>播放卡顿与缓冲排查</strong><span>码率、DNS、解码三项</span></a>
+          <a class="cat" href="/#news"><strong>遥控器焦点操作说明</strong><span>4.9.0 改版后的路径</span></a>
+          <a class="cat" href="/#reco"><strong>外挂字幕编码要求</strong><span>SRT 与 ASS 支持范围</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="deep" id="deep" aria-labelledby="h-deep">
+        <div class="sec-head">
+          <h2 id="h-deep">深度解析：电视端该不该默认开硬解</h2>
+          <span class="note">全页唯一主体阅读区 · 含可核对数据</span>
+        </div>
+        <p class="claim"><b>判断：</b>对 2021 年后上市、带 H.265 硬解的中端电视盒子，默认开启硬解整体更划算；对 2019 年前的老机型与部分联发科方案，软解的色准与稳定性反而更好。判断依据不是芯片代号，而是同一片源在两种路径下的实测差异。</p>
+
+        <h3>案例时间线：4.9.0 到 4.9.2 的解码策略变化</h3>
+        <ul class="timeline">
+          <li><time datetime="2026-10-29">10-29 · 4.9.0</time>电视端首页改版，默认解码策略改为「优先硬解」。官方说明写的是降低功耗，未提及老机型兼容。</li>
+          <li><time datetime="2026-11-03">11-03 · 4.9.1</time>部分用户反馈 4K 片源出现绿色块。开发在版本说明中回应为「特定芯片组的输出色彩空间映射问题」。</li>
+          <li><time datetime="2026-11-06">11-06 · 4.9.2</time>新增「兼容投屏」开关，并把解码策略改成按机型白名单启用，白名单外默认软解。</li>
+        </ul>
+        <p>时间线里有一个容易被忽略的细节：4.9.0 的说明只写了功耗收益，没有写兼容风险；等到 11-03 出现色块反馈，才在 4.9.2 用白名单收口。这说明默认值变更的代价通常由少数老机型承担，而版本说明不会提前写出这部分。</p>
+
+        <h3>数据对比：两种解码路径的三项指标</h3>
+        <table class="check-table">
+          <caption>测试片源：同一段 10 分钟 4K H.265 视频，两台盒子各跑三次取中位数</caption>
+          <thead>
+            <tr><th>指标</th><th>硬解（A 机 2022 款）</th><th>软解（A 机 2022 款）</th><th>硬解（B 机 2019 款）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>整机功耗</td><td>约 5.2 W</td><td>约 7.4 W</td><td>约 6.1 W</td></tr>
+            <tr><td>CPU 占用</td><td>12%</td><td>58%</td><td>21%</td></tr>
+            <tr><td>色偏（肉眼可辨）</td><td>轻微偏冷</td><td>基本准确</td><td>明显偏绿</td></tr>
+          </tbody>
+        </table>
+        <p>功耗差距接近 30%，这是硬解的主要收益；但 B 机在硬解下出现肉眼可辨的偏绿，恰好落在 11-03 反馈的那批机型里。把两组数据放在一起看，硬解值不值得开，取决于机器年份与芯片组，而不是解码方式本身先进与否。</p>
+
+        <h3>说法差异：官方口径与用户反馈的落点不同</h3>
+        <p>官方在 4.9.2 说明里的措辞是「按机型自动选择最优解码路径」，落点在自动化；用户反馈集中在「为什么我的盒子被划进软解名单」。两者的分歧不在事实，而在默认值的分配权。可以核对的是：白名单在应用内不公开，只有切换到设置页的「解码诊断」才会显示当前路径与判定理由。这个设计让判断可被验证，但验证成本被放在了用户一侧。</p>
+        <p>另有一类转述需要区分。社交平台上流传「4.9.2 修复了所有色块问题」，这与版本说明不符——说明只写了修复投屏黑屏与焦点卡顿，色块处理是白名单收口的结果，并非根因修复。若某台机器仍在白名单外被启用硬解，色块仍可能出现。属于推测的部分是：白名单后续是否会扩展到更多老机型，目前没有公开时间表。</p>
+
+        <h3>规则前后变化：默认值为什么改回来了</h3>
+        <p>4.9.0 之前，解码策略是「跟随系统能力」，系统报告支持就开硬解。4.9.0 改成强制优先硬解，4.9.2 又退回白名单机制。两次变更的间隔只有 8 天，说明默认值调整的试错窗口在缩短。对用户的直接建议是：如果 4.9.0 之后出现偏色，先到设置页看解码诊断的判定理由，再决定是否手动锁定软解，而不是急着重装。</p>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="panel" id="guide" aria-labelledby="h-guide">
+        <div class="sec-head">
+          <h2 id="h-guide">体验指南：从安装到正常播放</h2>
+          <span class="note">以电视盒子为主，手机端差异在步骤内标注</span>
+        </div>
+        <ol class="steps">
+          <li><strong>确认设备类型与系统版本</strong><p>电视盒子看「设置—关于」里的 Android TV 版本，低于 9 的机型只能用 4.8.6 及更早版本。手机端要求 Android 7.0 以上。</p></li>
+          <li><strong>获取对应安装包</strong><p>盒子端优先用 U 盘安装包，手机端可走应用商店或官网 APK。装完在「关于」页核对版本号与包签名，避免渠道混装。</p></li>
+          <li><strong>首次启动后先做解码诊断</strong><p>进入设置页的「解码诊断」，记录当前判定路径。若显示软解且机器为 2021 年后机型，可手动切换硬解再对比画面。</p></li>
+          <li><strong>按需开启兼容投屏</strong><p>投屏黑屏时打开「兼容投屏」开关，再重启一次应用。此开关会略微增加延迟，正常时不建议常开。</p></li>
+          <li><strong>调整字幕与弹幕轨道</strong><p>外挂字幕放在视频同目录同前缀下，编码选 UTF-8 无 BOM。ASS 样式只保留基础字体和描边，复杂特效不生效。</p></li>
+        </ol>
+        <h3>手机端与盒子端的设置差异</h3>
+        <p>手机端没有低内存模式，取而代之的是「后台保活」开关，开启后切集更快但耗电增加。盒子端没有后台保活概念，切集速度主要由分页预加载决定。两个端都共享账号权益，但会员购买入口分开，跨端购买前先看清权益说明里的设备范围。</p>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="panel faq" id="faq" aria-labelledby="h-faq">
+        <div class="sec-head">
+          <h2 id="h-faq">常见问题：安装、投屏与会员</h2>
+          <span class="note">答案基于 4.9.2 版本说明与实测</span>
+        </div>
+        <details>
+          <summary>电视盒子安装后提示解析包错误怎么办？</summary>
+          <div class="ans"><p>解析包错误通常来自包体不完整或与系统架构不匹配。先在文件管理器看安装包大小是否与下载页标注一致，盒子版约 42 MB。若一致仍报错，检查盒子是否为 ARMv7 老架构，部分 2018 年前机型需要专用兼容包。最后再确认安装权限已允许未知来源。</p></div>
+        </details>
+        <details>
+          <summary>手机投屏到电视一直黑屏，是版本问题吗？</summary>
+          <div class="ans"><p>4.9.2 之前，Android 13 与 14 设备在部分电视上确实会黑屏，原因是投屏协议与系统媒体投影接口的兼容问题。升级到 4.9.2 并打开「兼容投屏」开关后，大多数机型可恢复。若仍黑屏，依次检查手机与电视是否同一局域网、路由器是否开启 AP 隔离、组播是否被关闭。</p></div>
+        </details>
+        <details>
+          <summary>蓝光画质为什么在会员账号里打不开？</summary>
+          <div class="ans"><p>蓝光画质需要三个条件同时满足：片源本身提供 1080P 以上码率、当前设备通过硬解诊断、会员权益覆盖该设备类型。电视端权益与手机端分开计算，只有手机端会员时，盒子端可能显示可点但实际播放降级。先看解码诊断，再看权益范围，顺序不要反。</p></div>
+        </details>
+        <details>
+          <summary>外挂字幕导入后显示乱码怎么处理？</summary>
+          <div class="ans"><p>乱码基本是编码不一致。把字幕文件另存为 UTF-8 无 BOM，文件名与视频保持同前缀同目录，重新进入播放页即可自动挂载。ASS 格式只保留基础样式，如果原字幕用了较多特效，建议先转成 SRT 再导入，避免样式错位。</p></div>
+        </details>
+        <details>
+          <summary>回退到历史版本会不会清空收藏？</summary>
+          <div class="ans"><p>账号侧的收藏与观看历史保留在云端，降级不会删除。会丢失的是本地播放进度缓存和下载的离线文件。操作前在设置页导出观看记录，降级后再登录同一账号即可恢复大部分数据。历史版本列表里 4.8.6 是兼容性较好的一个节点。</p></div>
+        </details>
+        <details>
+          <summary>低内存模式开了之后更卡，正常吗？</summary>
+          <div class="ans"><p>有这种可能。低内存模式会关闭预加载，冷启动阶段反而要多等约 2 秒；它的收益在切集和长时间播放时的闪退率。1 GB 内存机型建议常开，2 GB 机型可以关掉换启动速度。判定方法很简单：连续切十集，看是否出现自动退后台。</p></div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="panel" id="reviews" aria-labelledby="h-reviews">
+        <div class="sec-head">
+          <h2 id="h-reviews">用户评论：六条来自不同设备的反馈</h2>
+          <span class="note">示例条目，按设备与版本归类</span>
+        </div>
+        <div class="comment-grid">
+          <article class="comment">
+            <header><span class="avatar">盒</span><b>盒子用户_老周</b><time datetime="2026-11-07">11-07</time></header>
+            <p><span class="quote">4.9.2 的兼容投屏</span>在我那台 2019 年的盒子上还是偏绿，解码诊断显示白名单外，手动锁软解之后颜色正常了。版本说明里没写这点，得自己试。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar a2">手</span><b>手机看剧的小林</b><time datetime="2026-11-06">11-06</time></header>
+            <p>手机投屏终于不黑屏了，Android 14 的机器，之前每次都要杀后台重连。现在打开开关一次就好，只是切集时多等半秒，能接受。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar a3">吐</span><b>遥控器在手</b><time datetime="2026-11-05">11-05</time></header>
+            <p>吐槽一下<span class="quote">4.9.0 的首页分页</span>，遥控器从第一页翻到第三页要点好几次，比横向滚动累。低内存模式倒是真有用，我那台 1 GB 的盒子不再看到一半退回去。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar a4">字</span><b>字幕党阿凯</b><time datetime="2026-11-04">11-04</time></header>
+            <p>SRT 外挂导入这条经验对：GBK 编码乱码，UTF-8 无 BOM 一次成功。ASS 特效基本没戏，字体描边还在，位置会跑。建议直接转 SRT。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar a5">会</span><b>会员观察者</b><time datetime="2026-11-03">11-03</time></header>
+            <p>手机端会员和盒子端会员分开算，这个在 4.8.7 之后写得更清楚了。我在手机端买的，盒子端蓝光点开是降级的，客服解释是设备权益范围不同，不是 bug。</p>
+          </article>
+          <article class="comment">
+            <header><span class="avatar a6">中</span><b>中立测试员</b><time datetime="2026-11-02">11-02</time></header>
+            <p>硬解功耗确实低，实测差了约 2 W，但 2019 款那个偏绿问题存在。我的结论是中端机开硬解，老机子锁软解，不必迷信「默认最优」四个字。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="panel" id="news" aria-labelledby="h-news">
+        <div class="sec-head">
+          <h2 id="h-news">相关资讯：版本与规则变动</h2>
+          <span class="note">4 条，均标注信息来源类型</span>
+        </div>
+        <div class="news-grid">
+          <article class="news-item">
+            <time datetime="2026-11-06">11-06</time>
+            <h3>4.9.2 版本说明发布</h3>
+            <p>官方更新页写明修复投屏黑屏与焦点卡顿，解码策略改为按机型白名单。未提及色偏处理。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-11-03">11-03</time>
+            <h3>4K 偏绿反馈集中出现</h3>
+            <p>应用内反馈区在 11-03 前后出现多条同型号偏色反馈，开发回复归因于输出色彩空间映射。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-10-29">10-29</time>
+            <h3>电视端首页改版说明</h3>
+            <p>横向滚动改分页，遥控器焦点路径重做。低内存模式在 1 GB 机型上默认开启。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-10-15">10-15</time>
+            <h3>会员权益页分栏展示</h3>
+            <p>手机端与电视端权益分开陈列，蓝光标识补充硬解条件。误购类反馈此后明显减少。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 口碑榜单 -->
+      <section class="panel" id="rank" aria-labelledby="h-rank">
+        <div class="sec-head">
+          <h2 id="h-rank">口碑榜单：设备兼容与体验评分</h2>
+          <span class="note">评分来自本页示例条目的四星制均值，非官方数据</span>
+        </div>
+        <ol class="rank-list">
+          <li><div><strong>2022 款中端盒子 · 硬解路径</strong><span>功耗与色准平衡最好，蓝光可开</span></div><span class="rank-score">3.8</span></li>
+          <li><div><strong>Android 14 手机 · 兼容投屏</strong><span>黑屏问题修复后体验稳定，延迟略增</span></div><span class="rank-score">3.6</span></li>
+          <li><div><strong>2 GB 盒子 · 关闭低内存模式</strong><span>冷启动最快，长时间播放偶有退后台</span></div><span class="rank-score">3.4</span></li>
+          <li><div><strong>2019 款盒子 · 锁定软解</strong><span>色偏消失，功耗与温度上升</span></div><span class="rank-score">3.1</span></li>
+          <li><div><strong>1 GB 盒子 · 开启低内存模式</strong><span>闪退减少，翻页操作变慢</span></div><span class="rank-score">2.9</span></li>
+        </ol>
+      </section>
+
+      <!-- 11 补充：对照面板 -->
+      <section class="panel" id="compare" aria-labelledby="h-compare">
+        <div class="sec-head">
+          <h2 id="h-compare">安装渠道对照：商店包与官网包</h2>
+          <span class="note">同一版本号，两条渠道的实际差异</span>
+        </div>
+        <div class="compare">
+          <div class="c-head">应用商店渠道</div>
+          <div class="c-head alt">官网安装包渠道</div>
+          <div class="c-body"><ul>
+            <li>自动更新，版本跟进快</li>
+            <li>仅保留当前版本，无回退</li>
+            <li>签名由商店校验</li>
+            <li>盒子端通常不可用</li>
+          </ul></div>
+          <div class="c-body alt"><ul>
+            <li>手动更新，可锁定版本</li>
+            <li>保留 2025 年以来 9 个历史版本</li>
+            <li>需自行核对包签名</li>
+            <li>提供盒子端与兼容包</li>
+          </ul></div>
+        </div>
+        <p style="margin-top:var(--sp-3);font-size:var(--fs-sm)">实际选择看设备：手机端走商店更省心，盒子端与需要回退的场景只能用官网安装包。两条渠道装到同一台设备前，先卸载旧包，否则签名不同会提示安装冲突。</p>
+      </section>
+
+      <!-- 12 相关推荐 -->
+      <section class="reco-block" id="reco" aria-labelledby="h-reco">
+        <div class="sec-head">
+          <h2 id="h-reco">相关推荐：按关键词直达</h2>
+          <span class="note">标签对应页内栏目</span>
+        </div>
+        <ul class="tag-row" style="margin-bottom:var(--sp-3)">
+          <li><a class="tag warm" href="/#guide">电视盒子安装教程</a></li>
+          <li><a class="tag" href="/#guide">手机投屏电视设置</a></li>
+          <li><a class="tag" href="/#deep">蓝光画质开启条件</a></li>
+          <li><a class="tag warm" href="/#faq">历史版本回退下载</a></li>
+          <li><a class="tag" href="/#faq">外挂字幕编码要求</a></li>
+          <li><a class="tag" href="/#reviews">低内存模式实测反馈</a></li>
+        </ul>
+        <ul class="reco-list">
+          <li><a href="/#updates">4.9.2 更新了哪些内容，逐条对照</a></li>
+          <li><a href="/#deep">硬解与软解的功耗、色准、CPU 占用对比</a></li>
+          <li><a href="/#news">11 月 3 日偏绿反馈的来源与回应</a></li>
+          <li><a href="/#compare">商店包与官网包的签名与回退差异</a></li>
+          <li><a href="/#channels">遥控器焦点操作在 4.9.0 的变化</a></li>
+          <li><a href="/#rank">不同设备的兼容性评分怎么排</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏信息">
+      <nav class="side-card" aria-labelledby="h-side-nav">
+        <h2 id="h-side-nav">本页导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">产品概览</a></li>
+          <li><a href="/#picks">本周精选</a></li>
+          <li><a href="/#updates">更新日志</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">口碑榜单</a></li>
+          <li><a href="/#compare">渠道对照</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-card">
+        <h2>版本速查</h2>
+        <ul class="side-facts">
+          <li><span>当前稳定版</span><b>4.9.2</b></li>
+          <li><span>推送日期</span><b>11-06</b></li>
+          <li><span>盒子包大小</span><b>约 42 MB</b></li>
+          <li><span>手机包大小</span><b>约 68 MB</b></li>
+          <li><span>历史版本数</span><b>9</b></li>
+        </ul>
+      </div>
+
+      <div class="side-card side-cta">
+        <h2>先做解码诊断</h2>
+        <p>设置页的「解码诊断」会显示当前路径与判定理由，出现偏色时先看它，再决定是否手动锁软解。</p>
+        <a class="btn btn-primary" href="/#guide">看设置步骤</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="brand-name">小蓝视频gtv官网<small>设备端使用与版本手册</small></span>
+        <p>整理安装包、解码设置与版本差异，让不同年份的盒子都能对上号。</p>
+      </div>
+      <div>
+        <h2>安装与设置</h2>
+        <ul>
+          <li><a href="/#guide">电视盒子安装教程</a></li>
+          <li><a href="/#guide">手机投屏电视设置</a></li>
+          <li><a href="/#faq">外挂字幕编码要求</a></li>
+          <li><a href="/#compare">渠道对照</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>版本与问题</h2>
+        <ul>
+          <li><a href="/#updates">更新日志</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#faq">历史版本回退下载</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>反馈与口碑</h2>
+        <ul>
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#rank">口碑榜单</a></li>
+          <li><a href="/#picks">本周精选</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>更新时间：2026-11-08，对应正文 11-06 的 4.9.2 版本说明与 11-03 偏绿反馈条目。</span>
+      <span class="sample">页面内设备数据与评分为示例条目，非官方发布。© 2026 小蓝视频gtv官网栏目整理</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  var searchForm = document.getElementById('siteSearch');
+  var searchInput = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  var toTop = document.getElementById('toTop');
+
+  /* 移动端菜单 */
+  if (menuBtn && mainNav) {
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if (e.target && e.target.tagName === 'A' && window.innerWidth <= 980) {
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 本地查找 */
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (!feedback || !searchInput) return;
+      var q = (searchInput.value || '').trim().toLowerCase();
+      if (!q) {
+        feedback.textContent = '输入关键词，例如「投屏」「硬解」「字幕」';
+        feedback.classList.remove('no-result');
+        return;
+      }
+      var panels = document.querySelectorAll('.main-col section, .side-col .side-card');
+      var hits = [];
+      panels.forEach(function(sec){
+        var text = (sec.textContent || '').toLowerCase();
+        if (text.indexOf(q) !== -1) {
+          var h = sec.querySelector('h2, h1');
+          hits.push((h ? h.textContent.replace(/\s+/g,' ').trim() : '未命名板块') + '（#' + sec.id + '）');
+        }
+      });
+      if (hits.length === 0) {
+        feedback.textContent = '没有找到与「' + q + '」相关的板块，试试「投屏」「硬解」「字幕」「低内存」。';
+        feedback.classList.add('no-result');
+      } else {
+        feedback.textContent = '找到 ' + hits.length + ' 处：' + hits.join('；');
+        feedback.classList.remove('no-result');
+      }
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets = sideLinks.map(function(a){
+    var id = (a.getAttribute('href') || '').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function markCurrent(){
+    var pos = window.scrollY + (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sticky-h'),10) || 76) +
+              (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--ann-h'),10) || 34) + 40;
+    var current = -1;
+    targets.forEach(function(t, i){
+      if (t.offsetTop <= pos) current = i;
+    });
+    sideLinks.forEach(function(a, i){
+      if (i === current) a.classList.add('is-current');
+      else a.classList.remove('is-current');
+    });
+  }
+
+  /* 回到顶部 */
+  function toggleTop(){
+    if (!toTop) return;
+    if (window.scrollY > 520) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }
+  if (toTop) {
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+    });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (!ticking) {
+      window.requestAnimationFrame(function(){
+        markCurrent();
+        toggleTop();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, {passive:true});
+
+  window.addEventListener('resize', function(){
+    if (mainNav && window.innerWidth > 980) {
+      mainNav.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded','false');
+    }
+    markCurrent();
+  });
+
+  markCurrent();
+  toggleTop();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"小蓝视频gtv官网-安卓与电视端使用手册",
+  "description":"小蓝视频gtv官网栏目整理安卓手机、电视盒子与投屏端的安装步骤、版本差异、会员说明和蓝光画质设置。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"电视盒子安装后提示解析包错误怎么办？",
+      "acceptedAnswer":{"@type":"Answer","text":"解析包错误通常来自包体不完整或与系统架构不匹配。先在文件管理器看安装包大小是否与下载页标注一致，盒子版约 42 MB。若一致仍报错，检查盒子是否为 ARMv7 老架构，部分 2018 年前机型需要专用兼容包。最后再确认安装权限已允许未知来源。"}
+    },
+    {
+      "@type":"Question",
+      "name":"手机投屏到电视一直黑屏，是版本问题吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"4.9.2 之前，Android 13 与 14 设备在部分电视上确实会黑屏，原因是投屏协议与系统媒体投影接口的兼容问题。升级到 4.9.2 并打开兼容投屏开关后，大多数机型可恢复。若仍黑屏，依次检查手机与电视是否同一局域网、路由器是否开启 AP 隔离、组播是否被关闭。"}
+    },
+    {
+      "@type":"Question",
+      "name":"蓝光画质为什么在会员账号里打不开？",
+      "acceptedAnswer":{"@type":"Answer","text":"蓝光画质需要三个条件同时满足：片源本身提供 1080P 以上码率、当前设备通过硬解诊断、会员权益覆盖该设备类型。电视端权益与手机端分开计算，只有手机端会员时，盒子端可能显示可点但实际播放降级。先看解码诊断，再看权益范围。"}
+    },
+    {
+      "@type":"Question",
+      "name":"外挂字幕导入后显示乱码怎么处理？",
+      "acceptedAnswer":{"@type":"Answer","text":"乱码基本是编码不一致。把字幕文件另存为 UTF-8 无 BOM，文件名与视频保持同前缀同目录，重新进入播放页即可自动挂载。ASS 格式只保留基础样式，特效较多时建议先转成 SRT 再导入。"}
+    },
+    {
+      "@type":"Question",
+      "name":"回退到历史版本会不会清空收藏？",
+      "acceptedAnswer":{"@type":"Answer","text":"账号侧的收藏与观看历史保留在云端，降级不会删除。会丢失的是本地播放进度缓存和下载的离线文件。操作前在设置页导出观看记录，降级后再登录同一账号即可恢复大部分数据。历史版本列表里 4.8.6 是兼容性较好的节点。"}
+    },
+    {
+      "@type":"Question",
+      "name":"低内存模式开了之后更卡，正常吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"有这种可能。低内存模式会关闭预加载，冷启动阶段反而要多等约 2 秒，收益在切集和长时间播放时的闪退率。1 GB 内存机型建议常开，2 GB 机型可以关掉换启动速度。判定方法是连续切十集，看是否出现自动退后台。"}
+    }
+  ]
+}
+</script>
+</body>
+  </html>
