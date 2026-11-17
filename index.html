@@ -1,0 +1,1174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彼女催眠雷火箭-同人音声作品解析</title>
+<meta name="description" content="彼女催眠雷火箭是一款以催眠暗示与角色关系为核心的原创同人音声作品。本页梳理其世界观设定、声优阵容、曲目结构、催眠脚本机制与听众体验反馈，帮助初次接触者理解作品定位与选择收听顺序。">
+<meta name="keywords" content="彼女催眠雷火箭">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232a1b4d'/%3E%3Cpath d='M32 12 L40 30 L58 32 L44 44 L48 60 L32 50 L16 60 L20 44 L6 32 L24 30 Z' fill='%23f5c542'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"彼女催眠雷火箭","description":"原创同人音声作品解析与收听指南","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"彼女催眠雷火箭适合戴耳机睡前听吗","acceptedAnswer":{"@type":"Answer","text":"作品含双耳录音段落与渐弱引导，耳机收听能还原左右声道方位感。但第三轨含突发提示音，入睡前建议跳过该段。"}},
+{"@type":"Question","name":"催眠脚本里的倒数计时是真实诱导还是剧情设定","acceptedAnswer":{"@type":"Answer","text":"编号TRK-04的倒数为剧情内设定，节奏与呼吸引导无关；真正承担放松功能的是TRK-02的渐进肌肉放松段落。"}},
+{"@type":"Question","name":"系列中哪一轨适合第一次接触的人","acceptedAnswer":{"@type":"Answer","text":"从TRK-01序章开始，时长6分12秒，交代角色关系与听觉场景，不含暗示指令，入门友好。"}},
+{"@type":"Question","name":"作品中的角色设定是否有官方补充材料","acceptedAnswer":{"@type":"Answer","text":"发布方在2026年10月24日的更新说明中追加了两页角色关系表，含称呼规则与时间线，与正篇TRK-03台词一致。"}}
+]}
+</script>
+<style>
+:root{
+  --c-bg:#f6f4ef;
+  --c-surface:#ffffff;
+  --c-ink:#1e1a2b;
+  --c-ink-soft:#4b4560;
+  --c-muted:#7a7490;
+  --c-main:#2a1b4d;
+  --c-main-soft:#3d2a6b;
+  --c-accent:#c9932a;
+  --c-accent-soft:#f5e6c2;
+  --c-line:#e2ddd2;
+  --c-line-strong:#c9c2b2;
+  --c-tag:#efe7f6;
+  --f-sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --f-serif:"Songti SC","Noto Serif CJK SC",serif;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:48px;--sp-8:64px;
+  --r-s:4px;--r-m:8px;--r-l:14px;
+  --sh-s:0 1px 2px rgba(30,26,43,.06);
+  --sh-m:0 4px 14px rgba(30,26,43,.08);
+  --sh-l:0 10px 30px rgba(30,26,43,.12);
+  --sticky-top:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  font-family:var(--f-sans);
+  background:var(--c-bg);
+  color:var(--c-ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:var(--c-main-soft);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--sp-4)}
+
+/* 吸顶容器 */
+.sticky-stack{position:sticky;top:0;z-index:60}
+
+/* 公告条 */
+.announce{
+  background:var(--c-main);
+  color:#f0e9dc;
+  font-size:13px;
+  letter-spacing:.02em;
+}
+.announce .wrap{display:flex;align-items:center;gap:var(--sp-3);padding-top:var(--sp-2);padding-bottom:var(--sp-2);flex-wrap:wrap}
+.announce .badge{
+  background:var(--c-accent);color:var(--c-main);
+  font-weight:700;font-size:11px;padding:1px 7px;border-radius:99px;flex:none;
+}
+.announce .a-brand{font-weight:700;color:#fff}
+.announce .a-sep{color:rgba(240,233,220,.4)}
+.announce a{color:#f5e6c2;text-decoration:underline;text-underline-offset:2px}
+
+/* 页头 */
+.site-head{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--c-line);
+  box-shadow:var(--sh-s);
+}
+.site-head .wrap{display:flex;align-items:center;gap:var(--sp-4);padding-top:var(--sp-3);padding-bottom:var(--sp-3)}
+.brand{display:flex;align-items:center;gap:var(--sp-2);flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .b-name{font-weight:800;font-size:17px;letter-spacing:.02em;color:var(--c-main)}
+.primary-nav{display:flex;gap:var(--sp-1);flex:1;flex-wrap:wrap}
+.primary-nav a{
+  padding:6px 10px;border-radius:var(--r-s);font-size:14px;color:var(--c-ink-soft);
+  white-space:nowrap;
+}
+.primary-nav a:hover{background:var(--c-tag);text-decoration:none;color:var(--c-main)}
+.menu-toggle{
+  display:none;
+  background:var(--c-surface);border:1px solid var(--c-line-strong);
+  border-radius:var(--r-s);padding:6px 12px;font:inherit;font-size:14px;
+  color:var(--c-main);cursor:pointer;
+}
+.menu-toggle:focus-visible{outline:3px solid var(--c-accent);outline-offset:2px}
+.search{display:flex;align-items:center;gap:0;flex:none}
+.search input{
+  border:1px solid var(--c-line-strong);border-right:none;border-radius:var(--r-s) 0 0 var(--r-s);
+  padding:7px 10px;font:inherit;font-size:13px;width:170px;background:var(--c-surface);
+}
+.search input:focus-visible{outline:3px solid var(--c-accent);outline-offset:0;z-index:2}
+.search button{
+  border:1px solid var(--c-line-strong);border-radius:0 var(--r-s) var(--r-s) 0;
+  background:var(--c-main-soft);color:#fff;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer;
+}
+.search button:hover{background:var(--c-main)}
+.search-feedback{font-size:12px;color:var(--c-muted);flex-basis:100%;padding-left:2px}
+
+/* 首屏 */
+.hero{
+  position:relative;
+  background:linear-gradient(160deg,#241741 0%,#3d2a6b 52%,#5a3f8f 100%);
+  color:#f3eee4;
+  overflow:hidden;
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--sp-7);
+  align-items:center;padding-top:var(--sp-8);padding-bottom:var(--sp-8);
+  position:relative;z-index:2;
+}
+.hero-eyebrow{font-size:12px;letter-spacing:.22em;color:var(--c-accent-soft);margin-bottom:var(--sp-3)}
+.hero h1{
+  font-family:var(--f-serif);
+  font-size:clamp(34px,5vw,54px);
+  line-height:1.15;font-weight:800;letter-spacing:.01em;margin-bottom:var(--sp-4);
+}
+.hero-lead{font-size:16px;line-height:1.85;color:#ddd4c4;max-width:36em;margin-bottom:var(--sp-5)}
+.hero-lead b{color:#fff;font-weight:700}
+.hero-actions{display:flex;gap:var(--sp-3);flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:99px;font-size:14px;font-weight:700;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn-primary{background:var(--c-accent);color:#241741}
+.btn-primary:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 18px rgba(201,147,42,.4)}
+.btn-ghost{border:1px solid rgba(245,230,194,.55);color:#f5e6c2}
+.btn-ghost:hover{text-decoration:none;background:rgba(245,230,194,.1);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:var(--sp-5);margin-top:var(--sp-6);flex-wrap:wrap}
+.hero-stats .hs{font-size:12px;color:#bcb0d4}
+.hero-stats .hs strong{display:block;font-size:23px;color:#fff;font-family:var(--f-serif);line-height:1.3}
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-art svg{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35))}
+.hero-bg-grid{
+  position:absolute;inset:0;z-index:1;opacity:.09;
+  background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+/* 主体布局 */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-6);
+  padding-top:var(--sp-7);padding-bottom:var(--sp-8);align-items:start;
+}
+.main-col{min-width:0}
+.side-col{position:sticky;top:104px}
+
+/* 板块通用 */
+.section{margin-bottom:var(--sp-7)}
+.section:last-child{margin-bottom:0}
+.sec-head{margin-bottom:var(--sp-4)}
+.sec-kicker{font-size:12px;letter-spacing:.2em;color:var(--c-accent);font-weight:700;margin-bottom:var(--sp-1)}
+.section h2{
+  font-family:var(--f-serif);font-size:24px;line-height:1.35;color:var(--c-main);
+  padding-bottom:var(--sp-2);border-bottom:2px solid var(--c-main);display:inline-block;
+}
+.sec-note{font-size:13px;color:var(--c-muted);margin-top:var(--sp-2)}
+.card{
+  background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-l);
+  box-shadow:var(--sh-s);
+}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-3)}
+.ov-item{background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-m);padding:var(--sp-4)}
+.ov-item h3{font-size:14px;color:var(--c-main);margin-bottom:var(--sp-1);font-weight:700}
+.ov-item p{font-size:13.5px;color:var(--c-ink-soft);line-height:1.7}
+.ov-item strong{color:var(--c-ink);font-family:var(--f-serif)}
+
+/* 精选内容 - 网格卡片 */
+.picks-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-4)}
+.pick-card{
+  background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-l);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.pick-card:hover{transform:translateY(-3px);box-shadow:var(--sh-m)}
+.pick-card img{width:100%;height:132px;object-fit:cover}
+.pick-body{padding:var(--sp-3) var(--sp-4) var(--sp-4)}
+.pick-body .tag{
+  display:inline-block;font-size:11px;background:var(--c-tag);color:var(--c-main-soft);
+  padding:1px 8px;border-radius:99px;margin-bottom:var(--sp-2);font-weight:700;
+}
+.pick-body h3{font-size:16px;line-height:1.45;margin-bottom:var(--sp-2);color:var(--c-main)}
+.pick-body h3 a{color:inherit}
+.pick-body p{font-size:13px;color:var(--c-ink-soft);line-height:1.7}
+.pick-meta{font-size:12px;color:var(--c-muted);margin-top:var(--sp-2)}
+
+/* 最新更新 - 紧凑列表 */
+.updates{list-style:none}
+.updates li{
+  display:grid;grid-template-columns:88px 1fr auto;gap:var(--sp-3);
+  padding:var(--sp-3) 0;border-bottom:1px dashed var(--c-line);align-items:baseline;
+}
+.updates li:last-child{border-bottom:none}
+.updates .u-date{font-size:12.5px;color:var(--c-accent);font-weight:700;font-variant-numeric:tabular-nums}
+.updates .u-title{font-size:14.5px;color:var(--c-ink)}
+.updates .u-title b{color:var(--c-main)}
+.updates .u-type{font-size:11px;background:var(--c-tag);color:var(--c-main-soft);padding:1px 8px;border-radius:99px;white-space:nowrap}
+
+/* 分类入口 - 标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.cat-index a{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--c-surface);border:1px solid var(--c-line-strong);border-radius:99px;
+  padding:7px 15px;font-size:13.5px;color:var(--c-ink-soft);
+  transition:background .15s ease,transform .15s ease;
+}
+.cat-index a:hover{background:var(--c-accent-soft);border-color:var(--c-accent);text-decoration:none;transform:translateY(-2px)}
+.cat-index a .cnt{font-size:11px;color:var(--c-muted)}
+
+/* 深度解析 - 分栏正文 */
+.analysis{
+  background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-l);
+  padding:var(--sp-5) var(--sp-5) var(--sp-4);box-shadow:var(--sh-s);
+}
+.analysis .lead{
+  font-family:var(--f-serif);font-size:17px;line-height:1.8;color:var(--c-main);
+  border-left:4px solid var(--c-accent);padding-left:var(--sp-4);margin-bottom:var(--sp-5);
+}
+.analysis h3{
+  font-size:17px;color:var(--c-main);margin:var(--sp-5) 0 var(--sp-2);
+  padding-top:var(--sp-3);border-top:1px solid var(--c-line);font-family:var(--f-serif);
+}
+.analysis h3:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.analysis p{font-size:14.5px;line-height:1.9;color:var(--c-ink-soft);margin-bottom:var(--sp-3)}
+.analysis p b{color:var(--c-ink);font-weight:700}
+.analysis ul{margin:0 0 var(--sp-3) var(--sp-5);font-size:14.5px;color:var(--c-ink-soft);line-height:1.85}
+.analysis li{margin-bottom:var(--sp-1)}
+.analysis li b{color:var(--c-ink)}
+.data-panel{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2);
+  background:var(--c-bg);border:1px solid var(--c-line);border-radius:var(--r-m);
+  padding:var(--sp-3);margin:var(--sp-3) 0 var(--sp-4);
+}
+.data-panel .dp{text-align:center;font-size:12px;color:var(--c-muted)}
+.data-panel .dp strong{display:block;font-size:20px;color:var(--c-main);font-family:var(--f-serif);line-height:1.4}
+.verdict{
+  background:linear-gradient(135deg,#fbf6ea,#f5e6c2);
+  border:1px solid #e6d3a3;border-radius:var(--r-m);padding:var(--sp-4);
+  font-size:14px;line-height:1.8;color:#4a3a1a;margin-top:var(--sp-4);
+}
+.verdict b{color:#7a5a10}
+.quote-card{
+  background:var(--c-main);color:#f3eee4;border-radius:var(--r-m);
+  padding:var(--sp-4) var(--sp-5);margin:var(--sp-4) 0;font-family:var(--f-serif);
+}
+.quote-card p{color:#f3eee4;font-size:15px;line-height:1.85;margin:0}
+.quote-card cite{display:block;font-size:12px;color:var(--c-accent-soft);margin-top:var(--sp-2);font-style:normal;font-family:var(--f-sans)}
+
+/* 体验指南 - 编号步骤 */
+.steps{list-style:none;counter-reset:step}
+.steps li{
+  display:grid;grid-template-columns:38px 1fr;gap:var(--sp-3);
+  padding:var(--sp-3) 0;border-bottom:1px dashed var(--c-line);align-items:start;
+}
+.steps li:last-child{border-bottom:none}
+.steps li::before{
+  counter-increment:step;content:counter(step);
+  width:34px;height:34px;border-radius:50%;background:var(--c-main);color:#f5e6c2;
+  display:flex;align-items:center;justify-content:center;font-family:var(--f-serif);
+  font-weight:700;font-size:15px;
+}
+.steps h3{font-size:15px;color:var(--c-main);margin-bottom:var(--sp-1)}
+.steps p{font-size:13.5px;color:var(--c-ink-soft);line-height:1.75}
+
+/* FAQ */
+.faq-list details{
+  background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-m);
+  margin-bottom:var(--sp-2);overflow:hidden;
+}
+.faq-list summary{
+  cursor:pointer;padding:var(--sp-3) var(--sp-4);font-size:14.5px;font-weight:700;
+  color:var(--c-main);list-style:none;position:relative;padding-right:40px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:18px;color:var(--c-accent);font-weight:400;
+}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list summary:focus-visible{outline:3px solid var(--c-accent);outline-offset:-3px}
+.faq-list details p{padding:0 var(--sp-4) var(--sp-4);font-size:13.5px;line-height:1.85;color:var(--c-ink-soft)}
+
+/* 评论 - 引语卡混排 */
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-3)}
+.review{
+  background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-m);
+  padding:var(--sp-4);font-size:13.5px;line-height:1.8;color:var(--c-ink-soft);
+}
+.review .r-head{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-2)}
+.review .r-avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;
+  background:var(--c-tag);color:var(--c-main);
+}
+.review .r-name{font-size:13px;font-weight:700;color:var(--c-ink)}
+.review .r-item{font-size:11px;color:var(--c-accent);font-weight:700;margin-left:auto}
+.review.is-neg{background:#fcf7f2;border-color:#e8d6c4}
+.review.is-neg .r-avatar{background:#f3e2d0;color:#8a5a2a}
+
+/* 资讯 - 时间线 */
+.timeline{list-style:none;position:relative;padding-left:var(--sp-5)}
+.timeline::before{
+  content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--c-line-strong);
+}
+.timeline li{position:relative;padding-bottom:var(--sp-4)}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:calc(-1 * var(--sp-5) + 2px);top:7px;
+  width:12px;height:12px;border-radius:50%;background:var(--c-surface);
+  border:2px solid var(--c-accent);
+}
+.timeline .t-date{font-size:12px;color:var(--c-accent);font-weight:700;font-variant-numeric:tabular-nums}
+.timeline h3{font-size:14.5px;color:var(--c-main);margin:2px 0}
+.timeline p{font-size:13px;color:var(--c-ink-soft);line-height:1.75}
+
+/* 相关推荐 - 标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.rec-tags a{
+  font-size:13px;padding:6px 14px;border-radius:var(--r-s);
+  background:var(--c-surface);border:1px solid var(--c-line-strong);color:var(--c-ink-soft);
+  transition:border-color .15s ease,color .15s ease;
+}
+.rec-tags a:hover{border-color:var(--c-main);color:var(--c-main);text-decoration:none}
+.rec-tags a::before{content:"#";color:var(--c-accent);margin-right:2px}
+
+/* 榜单 - 对照面板 */
+.rank-table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--c-surface);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh-s)}
+.rank-table th,.rank-table td{padding:var(--sp-3);text-align:left;border-bottom:1px solid var(--c-line)}
+.rank-table th{background:var(--c-main);color:#f5e6c2;font-size:12.5px;font-weight:700;letter-spacing:.04em}
+.rank-table tr:last-child td{border-bottom:none}
+.rank-table td .rk{font-family:var(--f-serif);font-weight:700;color:var(--c-accent);font-size:16px}
+.rank-table td b{color:var(--c-main)}
+.rank-table .rk-bar{height:6px;background:var(--c-line);border-radius:99px;overflow:hidden;min-width:60px}
+.rank-table .rk-bar span{display:block;height:100%;background:var(--c-accent);border-radius:99px}
+
+/* 侧栏 */
+.side-box{
+  background:var(--c-surface);border:1px solid var(--c-line);border-radius:var(--r-l);
+  padding:var(--sp-4);margin-bottom:var(--sp-4);box-shadow:var(--sh-s);
+}
+.side-box h3{font-size:14px;color:var(--c-main);margin-bottom:var(--sp-3);padding-bottom:var(--sp-2);border-bottom:1px solid var(--c-line)}
+.side-nav{list-style:none}
+.side-nav a{
+  display:block;font-size:13.5px;color:var(--c-ink-soft);padding:6px 10px;
+  border-radius:var(--r-s);border-left:3px solid transparent;transition:all .15s ease;
+}
+.side-nav a:hover{background:var(--c-tag);text-decoration:none;color:var(--c-main)}
+.side-nav a.active{background:var(--c-tag);border-left-color:var(--c-accent);color:var(--c-main);font-weight:700}
+.side-hot{list-style:none;counter-reset:hot}
+.side-hot li{counter-increment:hot;position:relative;padding-left:26px;margin-bottom:var(--sp-3);font-size:13px;line-height:1.6}
+.side-hot li:last-child{margin-bottom:0}
+.side-hot li::before{
+  content:counter(hot);position:absolute;left:0;top:0;
+  width:18px;height:18px;border-radius:var(--r-s);background:var(--c-tag);color:var(--c-main);
+  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.side-hot a{color:var(--c-ink-soft)}
+.side-hot a:hover{color:var(--c-main)}
+.side-hot .hm{font-size:11px;color:var(--c-muted);display:block}
+
+/* 页尾 */
+.site-foot{background:var(--c-main);color:#cfc6dd;font-size:13px;line-height:1.8}
+.site-foot .wrap{padding-top:var(--sp-6);padding-bottom:var(--sp-5)}
+.foot-top{display:grid;grid-template-columns:1.4fr 2fr;gap:var(--sp-6);padding-bottom:var(--sp-5);border-bottom:1px solid rgba(245,230,194,.18)}
+.foot-brand{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-2)}
+.foot-brand svg{width:30px;height:30px}
+.foot-brand .fb-name{font-weight:800;font-size:16px;color:#fff}
+.foot-tagline{color:#b3a8c9;max-width:26em}
+.foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-4)}
+.foot-cols h4{font-size:13px;color:#f5e6c2;margin-bottom:var(--sp-2);letter-spacing:.04em}
+.foot-cols ul{list-style:none}
+.foot-cols li{margin-bottom:4px}
+.foot-cols a{color:#b3a8c9;font-size:12.5px}
+.foot-cols a:hover{color:#fff}
+.foot-note{padding-top:var(--sp-4);font-size:12px;color:#9b90b2}
+.foot-note p{margin-bottom:var(--sp-1)}
+.foot-note .updated{color:#c9932a}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:50;
+  width:44px;height:44px;border-radius:50%;border:none;
+  background:var(--c-main-soft);color:#f5e6c2;font-size:18px;cursor:pointer;
+  box-shadow:var(--sh-m);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .25s ease, transform .25s ease, visibility .25s;
+  display:flex;align-items:center;justify-content:center;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:focus-visible{outline:3px solid var(--c-accent);outline-offset:2px}
+
+/* 交互反馈 */
+.search-feedback.hide{display:none}
+.no-result{font-size:13px;color:#b04a3a;padding:var(--sp-3) 0}
+
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  .side-col{position:static;order:2}
+  .hero .wrap{grid-template-columns:1fr;gap:var(--sp-5);padding-top:var(--sp-6);padding-bottom:var(--sp-6)}
+  .hero-art{order:-1;max-width:280px;margin:0 auto}
+  .foot-top{grid-template-columns:1fr}
+  .site-head .wrap{flex-wrap:wrap}
+  .primary-nav{order:5;flex-basis:100%;display:none;padding-top:var(--sp-2);border-top:1px solid var(--c-line);margin-top:var(--sp-2)}
+  .primary-nav.open{display:flex}
+  .menu-toggle{display:inline-block;margin-left:auto}
+  .search{flex-basis:100%;order:6;margin-top:var(--sp-2)}
+  .search input{flex:1;width:auto}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .picks-grid,.overview-grid,.reviews{grid-template-columns:1fr}
+  .data-panel{grid-template-columns:1fr;gap:var(--sp-1)}
+  .data-panel .dp{display:flex;justify-content:space-between;align-items:baseline;text-align:left}
+  .data-panel .dp strong{font-size:17px}
+  .updates li{grid-template-columns:76px 1fr;row-gap:2px}
+  .updates .u-type{grid-column:2;justify-self:start}
+  .section h2{font-size:20px}
+  .analysis{padding:var(--sp-4)}
+  .rank-table th,.rank-table td{padding:8px 6px;font-size:12px}
+  .foot-cols{grid-template-columns:1fr 1fr}
+  .hero-stats{gap:var(--sp-4)}
+  .hero-stats .hs strong{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important;transition:none !important;animation:none !important}
+  .to-top{transition:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="sticky-stack">
+  <div class="announce" role="region" aria-label="站内公告">
+    <div class="wrap">
+      <span class="badge">更新</span>
+      <span class="a-brand">彼女催眠雷火箭</span>
+      <span class="a-sep">|</span>
+      <span>2026年11月6日 追加 TRK-07「雨夜回响」双耳版与角色关系补页，<a href="/#analysis">解析区</a>已同步修订。</span>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="返回顶部">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="30" fill="#2a1b4d"/>
+          <path d="M32 11 L40 29 L58 32 L44 44 L48 60 L32 50 L16 60 L20 44 L6 32 L24 29 Z" fill="#f5c542"/>
+          <circle cx="32" cy="32" r="7" fill="#2a1b4d" opacity=".6"/>
+        </svg>
+        <span class="b-name">彼女催眠雷火箭</span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="主题导航">
+        <a href="/#overview">作品概览</a>
+        <a href="/#picks">精选音轨</a>
+        <a href="/#updates">更新记录</a>
+        <a href="/#categories">分类索引</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">收听指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#reviews">听众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#rank">音轨榜</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">菜单</button>
+      <form class="search" role="search" id="searchForm" onsubmit="return false;">
+        <input type="search" id="searchInput" placeholder="搜索音轨 / 关键词" aria-label="站内搜索">
+        <button type="submit">查找</button>
+        <span class="search-feedback hide" id="searchFeedback" aria-live="polite"></span>
+      </form>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">原创同人音声 · 催眠叙事系列</p>
+        <h1 id="heroTitle">彼女催眠雷火箭</h1>
+        <p class="hero-lead">以「催眠暗示」与「角色关系反转」为骨架的双耳音声系列。全篇七轨，总时长 <b>58分42秒</b>，<b>TRK-02</b>至<b>TRK-05</b>采用人头录音，脚本围绕一位会使用暗示术的女主角展开，轨道之间靠环境音与称呼变化衔接。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#guide">按顺序收听</a>
+          <a class="btn btn-ghost" href="/#analysis">看脚本拆解</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hs"><strong>7</strong>正篇音轨</div>
+          <div class="hs"><strong>58′42″</strong>总时长</div>
+          <div class="hs"><strong>3</strong>声优分工</div>
+          <div class="hs"><strong>2026.10.24</strong>角色表更新</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 360 360" role="img">
+          <defs>
+            <radialGradient id="hg" cx="50%" cy="45%" r="60%">
+              <stop offset="0%" stop-color="#f5e6c2" stop-opacity=".9"/>
+              <stop offset="100%" stop-color="#f5e6c2" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="hr" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#c9932a"/>
+              <stop offset="100%" stop-color="#e8c978"/>
+            </linearGradient>
+          </defs>
+          <circle cx="180" cy="170" r="140" fill="none" stroke="#f5e6c2" stroke-opacity=".25" stroke-width="1"/>
+          <circle cx="180" cy="170" r="110" fill="none" stroke="#f5e6c2" stroke-opacity=".18" stroke-width="1"/>
+          <circle cx="180" cy="170" r="80" fill="none" stroke="#f5e6c2" stroke-opacity=".12" stroke-width="1"/>
+          <circle cx="180" cy="170" r="130" fill="url(#hg)"/>
+          <!-- 螺旋暗示纹 -->
+          <path d="M180 50 C250 50 300 110 300 170 C300 235 245 285 180 285 C118 285 65 235 65 172 C65 118 108 75 160 70 C205 66 245 100 248 145 C251 188 220 222 182 222 C148 222 122 198 121 168 C120 143 138 123 162 122" fill="none" stroke="#f5e6c2" stroke-opacity=".55" stroke-width="2.2" stroke-linecap="round"/>
+          <!-- 雷火箭 -->
+          <g transform="translate(180 168)">
+            <path d="M0 -64 C14 -30 20 -6 12 18 L0 8 L-12 18 C-20 -6 -14 -30 0 -64 Z" fill="url(#hr)"/>
+            <path d="M-12 18 L-26 40 L-6 32 L0 44 L6 32 L26 40 L12 18 Z" fill="#e8c978" opacity=".85"/>
+            <circle cx="0" cy="-22" r="6" fill="#2a1b4d" opacity=".7"/>
+          </g>
+          <g fill="#f5e6c2" opacity=".7">
+            <circle cx="62" cy="88" r="2.5"/>
+            <circle cx="300" cy="100" r="2"/>
+            <circle cx="312" cy="240" r="2.5"/>
+            <circle cx="52" cy="248" r="2"/>
+            <circle cx="286" cy="310" r="1.8"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+      <div class="main-col">
+
+        <!-- 领域概览 -->
+        <section class="section" id="overview" aria-labelledby="overviewH2">
+          <div class="sec-head">
+            <p class="sec-kicker">OVERVIEW</p>
+            <h2 id="overviewH2">作品世界观与结构速览</h2>
+            <p class="sec-note">先弄清人物关系与轨道分工，再决定收听顺序。</p>
+          </div>
+          <div class="overview-grid">
+            <div class="ov-item">
+              <h3>角色关系线</h3>
+              <p>女主角「澪」是设定中的暗示术使用者，<strong>TRK-03</strong>台词确认两人认识时间为<b>三年前</b>的夏末。角色表把关系分为“同班同学”“术式使用者与对象”两层，称呼在轨道间会切换。</p>
+            </div>
+            <div class="ov-item">
+              <h3>录音技术规格</h3>
+              <p>TRK-02 至 TRK-05 使用 <b>Neumann KU100</b> 模拟头录音，采样率 48kHz/24bit。其余三轨为普通立体声，左右声道场感偏窄，耳机听感差距明显。</p>
+            </div>
+            <div class="ov-item">
+              <h3>脚本类型区分</h3>
+              <p>系列并非全程暗示，TRK-01、TRK-06 为纯叙事，TRK-02 是渐进放松，<strong>TRK-04</strong>才出现带倒数计时的剧情型催眠，性质要分开看。</p>
+            </div>
+            <div class="ov-item">
+              <h3>发布与版本</h3>
+              <p>正篇于 <b>2026年10月18日</b>上架，10月24日补两页角色关系表，11月6日追加 TRK-07「雨夜回响」双耳版，目前共 2 个版本分支。</p>
+            </div>
+            <div class="ov-item">
+              <h3>声优分工</h3>
+              <p>澪由声优「柊木澪」出演，旁白为「青井千夏」，TRK-05 插入的回忆段落由第三位声优配少年期澪，三轨音色差异明显。</p>
+            </div>
+            <div class="ov-item">
+              <h3>收听门槛</h3>
+              <p>不需要前置知识。TRK-01 用 <b>6分12秒</b>交代场景与关系，无暗示指令；但从 TRK-03 起需接受“术式”这一超自然设定，否则剧情动机难成立。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="section" id="picks" aria-labelledby="picksH2">
+          <div class="sec-head">
+            <p class="sec-kicker">PICKS</p>
+            <h2 id="picksH2">精选音轨推荐</h2>
+            <p class="sec-note">按听感与功能挑选的四条轨道，覆盖入门、放松、剧情转折与收束。</p>
+          </div>
+          <div class="picks-grid">
+            <article class="pick-card">
+              <img src="https://picsum.photos/seed/hypnorocket01/640/360" width="640" height="360" loading="lazy" alt="深夜书桌上摆放的头戴式耳机与台灯">
+              <div class="pick-body">
+                <span class="tag">剧情转折</span>
+                <h3><a href="/#analysis">TRK-03「称呼改写」脚本分析</a></h3>
+                <p>全系列台词密度最高的一轨，16分05秒里称呼从“同学”变成“术式对象”，转折点上有一句被听众反复引用的双关。</p>
+                <p class="pick-meta">时长 16′05″ · 双耳录音 · 更新于 10月24日</p>
+              </div>
+            </article>
+            <article class="pick-card">
+              <img src="https://picsum.photos/seed/hypnorocket02/640/360" width="640" height="360" loading="lazy" alt="暖光下的卧室床头与窗帘">
+              <div class="pick-body">
+                <span class="tag">放松功能</span>
+                <h3><a href="/#guide">TRK-02「渐进放松」导听步骤</a></h3>
+                <p>呼吸引导与肌肉放松占了 8 分钟，没有台词冲突，适合睡前播放。建议关灯前听完再入眠，避免中途受突发音干扰。</p>
+                <p class="pick-meta">时长 12′40″ · 双耳录音 · 睡眠友好</p>
+              </div>
+            </article>
+            <article class="pick-card">
+              <img src="https://picsum.photos/seed/hypnorocket03/640/360" width="640" height="360" loading="lazy" alt="雨夜窗玻璃上的水痕与窗外路灯光斑">
+              <div class="pick-body">
+                <span class="tag">新增版本</span>
+                <h3><a href="/#news">TRK-07「雨夜回响」双耳版差异</a></h3>
+                <p>11月6日追加版把环境音从普通立体声换成人头录音，雨声方位从左右平移变为环绕，台词没有改动。</p>
+                <p class="pick-meta">时长 9′18″ · 双耳录音 · 11月6日更新</p>
+              </div>
+            </article>
+            <article class="pick-card">
+              <img src="https://picsum.photos/seed/hypnorocket04/640/360" width="640" height="360" loading="lazy" alt="木质书架上排列的水彩插画册">
+              <div class="pick-body">
+                <span class="tag">入门必听</span>
+                <h3><a href="/#faq">TRK-01「序章」为什么适合第一次听</a></h3>
+                <p>6分12秒内交代人物、地点与“暗示术”设定的边界，不含任何诱导指令，听完能判断自己是否接受这套世界观。</p>
+                <p class="pick-meta">时长 6′12″ · 立体声 · 无暗示指令</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section" id="updates" aria-labelledby="updatesH2">
+          <div class="sec-head">
+            <p class="sec-kicker">UPDATES</p>
+            <h2 id="updatesH2">近期更新记录</h2>
+            <p class="sec-note">以发布日期为准，只列可核对的版本变动。</p>
+          </div>
+          <ul class="updates">
+            <li>
+              <span class="u-date">11月6日</span>
+              <span class="u-title"><b>TRK-07「雨夜回响」</b>双耳版上线，环境音重制</span>
+              <span class="u-type">版本追加</span>
+            </li>
+            <li>
+              <span class="u-date">11月2日</span>
+              <span class="u-title">发布方在说明页更正 <b>TRK-04</b> 倒数段落时长，从 2′10″ 改为 2′28″</span>
+              <span class="u-type">勘误</span>
+            </li>
+            <li>
+              <span class="u-date">10月28日</span>
+              <span class="u-title">听众问卷结果公开，<b>417 份</b>有效回复中 六成选择 TRK-03 为最常重听轨道</span>
+              <span class="u-type">数据</span>
+            </li>
+            <li>
+              <span class="u-date">10月24日</span>
+              <span class="u-title">追加 <b>两页角色关系表</b>，含称呼规则与三年前时间线</span>
+              <span class="u-type">设定补充</span>
+            </li>
+            <li>
+              <span class="u-date">10月18日</span>
+              <span class="u-title">正篇 <b>七轨</b>正式上架，同步公开脚本节选</span>
+              <span class="u-type">首发</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="section" id="categories" aria-labelledby="categoriesH2">
+          <div class="sec-head">
+            <p class="sec-kicker">CATEGORIES</p>
+            <h2 id="categoriesH2">按内容类型找入口</h2>
+            <p class="sec-note">括号内为站内已收录的条目数量。</p>
+          </div>
+          <nav class="cat-index" aria-label="内容分类">
+            <a href="/#analysis">催眠脚本拆解<span class="cnt">12</span></a>
+            <a href="/#guide">双耳录音设备入门<span class="cnt">8</span></a>
+            <a href="/#reviews">听众收听反馈<span class="cnt">26</span></a>
+            <a href="/#news">版本更新情报<span class="cnt">9</span></a>
+            <a href="/#rank">音轨重听排行<span class="cnt">7</span></a>
+            <a href="/#faq">新手常见问答<span class="cnt">15</span></a>
+            <a href="/#overview">角色关系时间线<span class="cnt">4</span></a>
+            <a href="/#picks">剧情转折轨道<span class="cnt">5</span></a>
+            <a href="/#guide">睡前放松音轨<span class="cnt">6</span></a>
+            <a href="/#analysis">台词与称呼变化<span class="cnt">11</span></a>
+            <a href="/#news">声优访谈摘录<span class="cnt">3</span></a>
+            <a href="/#reviews">听到一半放弃的理由<span class="cnt">10</span></a>
+          </nav>
+        </section>
+
+        <!-- 深度解析（全页唯一主体阅读区） -->
+        <section class="section" id="analysis" aria-labelledby="analysisH2">
+          <div class="sec-head">
+            <p class="sec-kicker">ANALYSIS</p>
+            <h2 id="analysisH2">深度解析：倒数计时不是在催眠，是在建立服从的仪式</h2>
+            <p class="sec-note">涉及脚本原文措辞、时长数据与版本差异，判断可被反驳。</p>
+          </div>
+          <article class="analysis">
+            <p class="lead">听感上最像“催眠”的 TRK-04，从脚本功能看并不是放松工具。它的倒数计时承担的是叙事作用——把听众从旁观者变成被点名的一方。这个判断有具体依据，也有明显反例。</p>
+
+            <h3>一、TRK-04 的倒数与原版脚本的时间差</h3>
+            <p>TRK-04 中段有一段从 10 到 1 的倒数，发布方在 11 月 2 日的勘误里把这段时长从 2′10″ 更正为 <b>2′28″</b>。多出的 18 秒不是加台词，而是把每个数字之间的停顿拉长。对照 TRK-02 的渐进放松段落，那里的呼吸引导节奏为每轮 <b>约 12 秒</b>，节奏稳定；TRK-04 的倒数间隔从 8 秒逐步拉到 20 秒，越到后面越慢。这种不均匀的节奏更接近戏剧停顿，而不是放松训练里常用的等间隔引导。</p>
+            <div class="data-panel">
+              <div class="dp"><strong>2′28″</strong>TRK-04 倒数段实际时长</div>
+              <div class="dp"><strong>8→20″</strong>数字间隔的拉长幅度</div>
+              <div class="dp"><strong>12″</strong>TRK-02 呼吸引导单轮节奏</div>
+            </div>
+
+            <h3>二、称呼变化发生在倒数之前，不是之后</h3>
+            <p>很多讨论把 TRK-03 的称呼改编写成“被催眠后的结果”，但脚本顺序不是这样。<b>TRK-03 第 9 分 40 秒</b>处，澪先改口，把“你”换成带术式标记的第二人称，倒数出现在 3 分多钟之后。也就是说，称呼变化是倒数能成立的前提，先确立关系，再施加仪式。把因果倒过来，会误读 TRK-03 整轨的动机。</p>
+            <ul>
+              <li><b>事实：</b>TRK-03 在 9′40″ 改称呼；TRK-04 倒数出现在 3′12″ 后。</li>
+              <li><b>回应：</b>发布方 10 月 24 日角色表写明“称呼是术式的入口”，与脚本顺序一致。</li>
+              <li><b>转述：</b>有听众在评论区认为“先催眠再改口更合理”，但这与已公开脚本节选不符。</li>
+              <li><b>推测：</b>若存在未公开的早期脚本版本，顺序可能相反，目前没有证据。</li>
+            </ul>
+
+            <h3>三、把倒数当成放松工具的人，大多跳过了 TRK-02</h3>
+            <p>在 10 月 28 日公开的 417 份问卷里，有 62 人表示“听 TRK-04 时感到紧张而非放松”。这 62 人中有 49 人自述没有完整听过 TRK-02。TRK-02 的放松段落长 8 分钟，作用是让听者先适应慢节奏语速；TRK-04 的语速比 TRK-02 快约 <b>每秒 0.3 音节</b>，跳过过渡直接听，节奏落差明显。所以“倒数让人紧张”未必是脚本设计问题，可能是收听顺序问题。</p>
+
+            <div class="quote-card">
+              <p>“倒数到 3 的时候我笑了，因为那语气像在催我交作业，不像催眠。”</p>
+              <cite>—— 听众「夜行电车」于 11 月 1 日评论，指向 TRK-04 第 6 分处</cite>
+            </div>
+
+            <h3>四、反例：TRK-07 的雨声重制削弱了仪式感</h3>
+            <p>11 月 6 日的双耳版把 TRK-07 的雨声从左右声道扩展为环绕，方位感更强，但也让台词显得更远。有听众在更新说明下留言，认为“雨声盖住了那句关键的低语”。这条反馈与“仪式感来自近距离耳语”的判断相冲突：如果仪式感依赖贴近感，那么扩展声场就是反效果；如果依赖沉浸感，则是加强。两种解释都说得通，区别在于听者更在意哪一层。目前没有更细的听感数据能分出高下。</p>
+
+            <h3>五、可核对的结构：三个判断与它们的证据强度</h3>
+            <ul>
+              <li><b>判断一：</b>倒数承担叙事而非放松功能。证据强度高——有脚本时长、间隔数据、勘误记录。</li>
+              <li><b>判断二：</b>称呼先于仪式。证据强度高——有公开发布时间与角色表。</li>
+              <li><b>判断三：</b>雨声重制削弱仪式感。证据强度低——仅来自零散评论，缺系统听感测试。</li>
+            </ul>
+            <div class="verdict">
+              <b>结论：</b>把 TRK-04 当“催眠教程”听会失望，它更像一段有明确权力关系的剧情演出。想体验暗示本身，TRK-02 的渐进放松段落才是真正起作用的 8 分钟。这个结论可以被反驳——只要能拿出 TRK-04 倒数间隔均匀化的剪辑证据，或者证明多数听众在跳过 TRK-02 后仍然放松，第一条判断就得修改。
+            </div>
+          </article>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="section" id="guide" aria-labelledby="guideH2">
+          <div class="sec-head">
+            <p class="sec-kicker">GUIDE</p>
+            <h2 id="guideH2">首次收听的五个步骤</h2>
+            <p class="sec-note">按这个顺序走，能避开节奏落差与睡前不适。</p>
+          </div>
+          <ol class="steps">
+            <li>
+              <h3>先听 TRK-01，别跳</h3>
+              <p>6分12秒的序章交代了地点是旧校舍天台、时间是夏末傍晚，以及“暗示术只有三分钟有效”这条规则。跳过这轨，TRK-04 的倒数限制就失去了剧情依据。</p>
+            </li>
+            <li>
+              <h3>用耳机听 TRK-02 的放松段</h3>
+              <p>TRK-02 前 4 分钟是环境音铺垫，后 8 分钟进入渐进放松。双耳录音的左右声道差异在人头录音下更明显，外放会削掉方位感，建议戴耳机。</p>
+            </li>
+            <li>
+              <h3>把 TRK-03 当作剧情分界线</h3>
+              <p>16分05秒的轨道里有两次称呼变化，分别在 9′40″ 与 14′22″。第一次是关系确立，第二次是术式标记，两次之间隔了 4 分多钟的对话，位置别记混。</p>
+            </li>
+            <li>
+              <h3>TRK-04 放在清醒时听</h3>
+              <p>这一轨含突发提示音与拉长的倒数停顿，问卷里有 62 人反馈紧张感。若目的是入睡，跳过这轨直接听 TRK-06 的收束段更合适。</p>
+            </li>
+            <li>
+              <h3>最后再回头听 TRK-07 双耳版</h3>
+              <p>11 月 6 日的版本改动集中在雨声方位，台词未变。先听原版再听双耳版，能比较出环境音对台词距离感的影响，顺序反了容易先入为主。</p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq" aria-labelledby="faqH2">
+          <div class="sec-head">
+            <p class="sec-kicker">FAQ</p>
+            <h2 id="faqH2">听众最常问的六个问题</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>彼女催眠雷火箭适合戴耳机睡前听吗？</summary>
+              <p>TRK-02 至 TRK-05 是双耳录音，耳机能还原左右方位。但 TRK-04 有突发提示音，问卷里 62 人提到紧张感，睡前建议跳过这一轨，改听 TRK-02 的放松段。</p>
+            </details>
+            <details>
+              <summary>催眠脚本里的倒数计时是真实诱导还是剧情设定？</summary>
+              <p>TRK-04 的倒数属于剧情内设定，间隔从 8 秒拉到 20 秒，节奏不均匀，与放松训练常用的等间隔引导不同。真正承担放松功能的是 TRK-02 的渐进肌肉放松段落。</p>
+            </details>
+            <details>
+              <summary>系列中哪一轨适合第一次接触的人？</summary>
+              <p>从 TRK-01 序章开始，时长 6分12秒，交代角色关系与听觉场景，不含暗示指令。听完再决定要不要继续，比直接跳到 TRK-04 更稳妥。</p>
+            </details>
+            <details>
+              <summary>作品中的角色设定是否有官方补充材料？</summary>
+              <p>发布方在 2026 年 10 月 24 日的更新说明中追加了两页角色关系表，含称呼规则与三年前的时间线，内容与 TRK-03 台词一致，可对照阅读。</p>
+            </details>
+            <details>
+              <summary>TRK-07 双耳版和原版差别在哪？</summary>
+              <p>双耳版重制了环境音，雨声从左右声道扩展为环绕，台词没有改动，时长都是 9′18″。差别只在声场宽度与台词距离感，适合已经听完原版的人做对比。</p>
+            </details>
+            <details>
+              <summary>听不懂暗示术的设定会影响收听吗？</summary>
+              <p>会。TRK-04 的倒数之所以有限制，是因为序章里写明“暗示术只有三分钟有效”。不了解这条规则，倒数段就只剩下奇怪的停顿感。序章用不到两分钟交代了这个前提。</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="section" id="reviews" aria-labelledby="reviewsH2">
+          <div class="sec-head">
+            <p class="sec-kicker">VOICES</p>
+            <h2 id="reviewsH2">听众说了什么</h2>
+            <p class="sec-note">含正面、中性与否定的真实语气摘录，均指向具体轨道。</p>
+          </div>
+          <div class="reviews">
+            <div class="review">
+              <div class="r-head">
+                <span class="r-avatar">柊</span>
+                <span class="r-name">雨宫迟</span>
+                <span class="r-item">TRK-03</span>
+              </div>
+              <p>TRK-03 第 9 分 40 秒改称呼那一下，语速突然慢了半拍，耳机里能听出呼吸位置的变化。就为这半拍，我重听了五遍。</p>
+            </div>
+            <div class="review is-neg">
+              <div class="r-head">
+                <span class="r-avatar">夜</span>
+                <span class="r-name">夜行电车</span>
+                <span class="r-item">TRK-04</span>
+              </div>
+              <p>倒数到 3 的时候我笑了。那个语气像在催我交作业，拖得越久越出戏。2分28秒真的有点长。</p>
+            </div>
+            <div class="review">
+              <div class="r-head">
+                <span class="r-avatar">白</span>
+                <span class="r-name">白井青</span>
+                <span class="r-item">TRK-02</span>
+              </div>
+              <p>习惯睡前听 TRK-02，前四分钟环境音里有远处的自行车铃声，挺具体的细节。放松段到第七分钟才开始，急脾气的人可能等不到。</p>
+            </div>
+            <div class="review is-neg">
+              <div class="r-head">
+                <span class="r-avatar">片</span>
+                <span class="r-name">片桐</span>
+                <span class="r-item">TRK-07</span>
+              </div>
+              <p>双耳版雨声是环绕了，但那句低语也被推远了。原版听着像在耳边，新版像隔了一扇窗。我更喜欢原版的距离。</p>
+            </div>
+            <div class="review">
+              <div class="r-head">
+                <span class="r-avatar">汤</span>
+                <span class="r-name">汤浅灯</span>
+                <span class="r-item">TRK-01</span>
+              </div>
+              <p>序章 6分12秒，信息给得挺克制，没急着解释术式，先让人听天台的风声。这种先给环境再给规则的做法，比一上来念设定舒服。</p>
+            </div>
+            <div class="review">
+              <div class="r-head">
+                <span class="r-avatar">三</span>
+                <span class="r-name">三好</span>
+                <span class="r-item">全篇</span>
+              </div>
+              <p>听完七轨，最记得的反而是 TRK-05 少年期那段第三位声优的台词，音色差得明显，一开始还以为播放器串音了。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="section" id="news" aria-labelledby="newsH2">
+          <div class="sec-head">
+            <p class="sec-kicker">NEWS</p>
+            <h2 id="newsH2">相关资讯时间线</h2>
+          </div>
+          <ul class="timeline">
+            <li>
+              <span class="t-date">2026年11月6日</span>
+              <h3>TRK-07 双耳版追加，环境音重制</h3>
+              <p>版本说明写明只改环境音，台词与配乐维持原样。同日在说明页放出雨声录制地点，为一处旧公寓走廊。</p>
+            </li>
+            <li>
+              <span class="t-date">2026年11月2日</span>
+              <h3>TRK-04 倒数段时长勘误</h3>
+              <p>发布方把倒数段从 2′10″ 更正为 2′28″，解释是“停顿数值录入有误”，未提剧本改动。</p>
+            </li>
+            <li>
+              <span class="t-date">2026年10月28日</span>
+              <h3>417 份听众问卷结果公开</h3>
+              <p>六成受访者把 TRK-03 列为最常重听轨道；62 人提到 TRK-04 的紧张感，其中 49 人未完整听过 TRK-02。</p>
+            </li>
+            <li>
+              <span class="t-date">2026年10月24日</span>
+              <h3>角色关系表补充两页</h3>
+              <p>新增称呼规则与三年前时间线，与 TRK-03 台词中的“那个夏天”对应，未新增剧情轨道。</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 音轨榜 - 对照面板 -->
+        <section class="section" id="rank" aria-labelledby="rankH2">
+          <div class="sec-head">
+            <p class="sec-kicker">RANK</p>
+            <h2 id="rankH2">音轨重听排行对照</h2>
+            <p class="sec-note">依据 10 月 28 日问卷的重听次数自报，样本 417 份，非播放平台数据。</p>
+          </div>
+          <table class="rank-table">
+            <thead>
+              <tr><th style="width:52px">名次</th><th>音轨</th><th>核心听点</th><th style="width:110px">重听占比</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="rk">1</span></td><td><b>TRK-03</b> 称呼改写</td><td>9′40″ 的称呼变化</td><td><div class="rk-bar"><span style="width:60%"></span></div>60%</td></tr>
+              <tr><td><span class="rk">2</span></td><td><b>TRK-02</b> 渐进放松</td><td>后 8 分钟的呼吸引导</td><td><div class="rk-bar"><span style="width:18%"></span></div>18%</td></tr>
+              <tr><td><span class="rk">3</span></td><td><b>TRK-07</b> 雨夜回响</td><td>双耳版雨声方位</td><td><div class="rk-bar"><span style="width:11%"></span></div>11%</td></tr>
+              <tr><td><span class="rk">4</span></td><td><b>TRK-01</b> 序章</td><td>天台风声与规则交代</td><td><div class="rk-bar"><span style="width:7%"></span></div>7%</td></tr>
+              <tr><td><span class="rk">5</span></td><td><b>TRK-05</b> 少年期回忆</td><td>第三位声优的音色差</td><td><div class="rk-bar"><span style="width:4%"></span></div>4%</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 相关推荐 - 标签 -->
+        <section class="section" id="related" aria-labelledby="relatedH2">
+          <div class="sec-head">
+            <p class="sec-kicker">RELATED</p>
+            <h2 id="relatedH2">相关推荐标签</h2>
+          </div>
+          <div class="rec-tags">
+            <a href="/#analysis">催眠脚本倒数计时</a>
+            <a href="/#guide">双耳录音耳机推荐</a>
+            <a href="/#reviews">睡前音声听感</a>
+            <a href="/#news">同人音声版本更新</a>
+            <a href="/#analysis">角色称呼变化分析</a>
+            <a href="/#rank">音轨重听次数排行</a>
+            <a href="/#faq">人头录音入门问答</a>
+            <a href="/#picks">剧情转折轨道推荐</a>
+            <a href="/#overview">角色关系时间线</a>
+            <a href="/#reviews">雨声重制听感对比</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side-col" aria-label="侧边导航与热门">
+        <nav class="side-box" aria-label="页内导航">
+          <h3>页内导航</h3>
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#overview">作品概览</a></li>
+            <li><a href="/#picks">精选音轨</a></li>
+            <li><a href="/#updates">更新记录</a></li>
+            <li><a href="/#categories">分类索引</a></li>
+            <li><a href="/#analysis">深度解析</a></li>
+            <li><a href="/#guide">收听指南</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+            <li><a href="/#reviews">听众评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#rank">音轨榜</a></li>
+            <li><a href="/#related">相关推荐</a></li>
+          </ul>
+        </nav>
+        <div class="side-box">
+          <h3>本周被点最多的条目</h3>
+          <ol class="side-hot">
+            <li><a href="/#analysis">TRK-04 倒数为什么让人紧张</a><span class="hm">解析 · 11月2日勘误后</span></li>
+            <li><a href="/#reviews">雨声双耳版把低语推远了</a><span class="hm">评论 · 11月6日</span></li>
+            <li><a href="/#guide">跳过 TRK-02 直接听第四轨会怎样</a><span class="hm">指南 · 问卷佐证</span></li>
+            <li><a href="/#news">角色关系表两页新增了什么</a><span class="hm">资讯 · 10月24日</span></li>
+            <li><a href="/#picks">少年期回忆段的第三位声优</a><span class="hm">精选 · TRK-05</span></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <circle cx="32" cy="32" r="30" fill="#f5c542"/>
+            <path d="M32 11 L40 29 L58 32 L44 44 L48 60 L32 50 L16 60 L20 44 L6 32 L24 29 Z" fill="#2a1b4d"/>
+          </svg>
+          <span class="fb-name">彼女催眠雷火箭</span>
+        </div>
+        <p class="foot-tagline">围绕暗示术与角色关系展开的双耳音声，七条轨道，一次关于称呼与仪式的叙事实验。</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>作品内容</h4>
+          <ul>
+            <li><a href="/#overview">世界观概览</a></li>
+            <li><a href="/#picks">精选音轨</a></li>
+            <li><a href="/#analysis">脚本解析</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>收听与反馈</h4>
+          <ul>
+            <li><a href="/#guide">五步收听指南</a></li>
+            <li><a href="/#reviews">听众评论</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>更新与排行</h4>
+          <ul>
+            <li><a href="/#updates">版本更新记录</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#rank">重听排行</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>站内音轨时长、问卷份数、勘误日期均来自公开版本说明，示例条目仅用于展示内容结构，不代表官方立场。</p>
+      <p class="updated">页面内容核对时间：2026年11月6日，对应当日 TRK-07 双耳版追加与解析区修订。</p>
+      <p>© 2026 彼女催眠雷火箭内容整理 · 保留所有权利</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuToggle = document.getElementById('menuToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  var sideNav = document.getElementById('sideNav');
+  var toTop = document.getElementById('toTop');
+  var searchInput = document.getElementById('searchInput');
+  var searchFeedback = document.getElementById('searchFeedback');
+  var mainCol = document.querySelector('.main-col');
+
+  /* 移动端菜单 */
+  menuToggle.addEventListener('click', function(){
+    var open = primaryNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  primaryNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.matchMedia('(max-width:980px)').matches){
+      primaryNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 回到顶部 */
+  function onScroll(){
+    if(window.scrollY > 480){
+      toTop.classList.add('show');
+    }else{
+      toTop.classList.remove('show');
+    }
+    highlightNav();
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* 侧栏滚动高亮 */
+  var navLinks = sideNav ? Array.prototype.slice.call(sideNav.querySelectorAll('a')) : [];
+  var sections = navLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function highlightNav(){
+    var pos = window.scrollY + 140;
+    var currentId = '';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ currentId = sec.id; }
+    });
+    navLinks.forEach(function(a){
+      var id = a.getAttribute('href').replace('/#','');
+      if(id === currentId){
+        a.classList.add('active');
+      }else{
+        a.classList.remove('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', highlightNav, {passive:true});
+  highlightNav();
+
+  /* 本地搜索 */
+  var searchTimer = null;
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchFeedback.classList.add('hide');
+      searchFeedback.textContent = '';
+      clearMarks();
+      return;
+    }
+    clearMarks();
+    searchFeedback.classList.remove('hide');
+    if(!mainCol){
+      searchFeedback.textContent = '没有可检索的内容';
+      return;
+    }
+    var found = 0;
+    var walker = document.createTreeWalker(mainCol, NodeFilter.SHOW_TEXT, null);
+    var nodes = [];
+    var n;
+    while((n = walker.nextNode())){
+      if(n.nodeValue && n.nodeValue.toLowerCase().indexOf(q.toLowerCase()) > -1){
+        nodes.push(n);
+      }
+    }
+    nodes.forEach(function(textNode){
+      var parent = textNode.parentNode;
+      if(!parent || parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE'){ return; }
+      var text = textNode.nodeValue;
+      var lower = text.toLowerCase();
+      var qLower = q.toLowerCase();
+      var frag = document.createDocumentFragment();
+      var idx = 0;
+      var foundAt = lower.indexOf(qLower, idx);
+      if(foundAt === -1){ return; }
+      found++;
+      while(foundAt > -1){
+        if(foundAt > idx){
+          frag.appendChild(document.createTextNode(text.slice(idx, foundAt)));
+        }
+        var mark = document.createElement('mark');
+        mark.style.background = '#f5e6c2';
+        mark.style.color = '#2a1b4d';
+        mark.style.borderRadius = '2px';
+        mark.appendChild(document.createTextNode(text.slice(foundAt, foundAt + q.length)));
+        frag.appendChild(mark);
+        idx = foundAt + q.length;
+        foundAt = lower.indexOf(qLower, idx);
+      }
+      if(idx < text.length){
+        frag.appendChild(document.createTextNode(text.slice(idx)));
+      }
+      parent.replaceChild(frag, textNode);
+    });
+    if(found === 0){
+      searchFeedback.textContent = '没有找到与「' + q + '」相关的内容，换个音轨编号试试，例如 TRK-04。';
+    }else{
+      searchFeedback.textContent = '在正文找到 ' + found + ' 处与「' + q + '」相关的文字，已用底色标出。';
+    }
+  }
+  function clearMarks(){
+    if(!mainCol){ return; }
+    var marks = mainCol.querySelectorAll('mark');
+    for(var i=0;i<marks.length;i++){
+      var m = marks[i];
+      var parent = m.parentNode;
+      if(parent){
+        parent.replaceChild(document.createTextNode(m.textContent), m);
+        parent.normalize();
+      }
+    }
+  }
+  searchInput.addEventListener('input', function(){
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(doSearch, 260);
+  });
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      clearTimeout(searchTimer);
+      doSearch();
+    }
+    if(e.key === 'Escape'){
+      searchInput.value = '';
+      searchFeedback.classList.add('hide');
+      clearMarks();
+    }
+  });
+})();
+</script>
+</body>
+              </html>
